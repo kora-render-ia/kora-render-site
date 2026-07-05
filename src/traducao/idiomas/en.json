@@ -1,0 +1,228 @@
+{
+  "navegacao": {
+    "comoFunciona": "How it works",
+    "funcionalidades": "Features",
+    "galeria": "Gallery",
+    "planos": "Pricing",
+    "faq": "FAQ",
+    "cta": "Buy Now"
+  },
+  "destaque": {
+    "marcador": "OFFICIAL SKETCHUP PLUGIN · V2.0",
+    "tituloAntes": "Renders powered by ",
+    "tituloDestaque": "Artificial Intelligence",
+    "tituloDepois": " right inside SketchUp.",
+    "descricao": "Turn your model into a photorealistic image in seconds. No complex setup, no expensive GPU, no leaving SketchUp.",
+    "ctaPrimario": "Buy Now",
+    "ctaSecundario": "Watch Demo",
+    "avaliacaoContagem": "+12,000",
+    "avaliacaoRotulo": "architects and designers",
+    "previaStatus": "Rendering",
+    "previaPreset": "Preset: Interior · Golden Hour",
+    "legendaFigura": "FIG. 01 — Living room, rendered in 2.4s"
+  },
+  "antesDepois": {
+    "marcador": "VISUAL PROOF",
+    "titulo": "From raw model to photorealistic render.",
+    "descricao": "Drag the ruler to compare. The same SketchUp scene, transformed by Kora in seconds.",
+    "rotuloAntes": "SketchUp",
+    "rotuloDepois": "Kora Render"
+  },
+  "faixaVersoes": {
+    "rotulo": "Compatible with"
+  },
+  "comoFunciona": {
+    "marcador": "PROCESS",
+    "titulo": "Three steps. One click. Professional results.",
+    "etapas": [
+      {
+        "titulo": "Install the plugin",
+        "descricao": "Download the installer and activate Kora inside SketchUp in under 1 minute."
+      },
+      {
+        "titulo": "Open your scene",
+        "descricao": "Use any model, at any level of detail. Kora understands the rest."
+      },
+      {
+        "titulo": "Generate stunning images",
+        "descricao": "Choose a preset, click render, and get a photorealistic result."
+      }
+    ]
+  },
+  "funcionalidades": {
+    "marcador": "FEATURES",
+    "titulo": "Everything you need to render with confidence.",
+    "itens": [
+      {
+        "titulo": "AI Rendering",
+        "descricao": "Photorealistic images generated in seconds from your model."
+      },
+      {
+        "titulo": "Smart Reflections",
+        "descricao": "Lighting and reflections that respect materials and scene context."
+      },
+      {
+        "titulo": "Intensity Control",
+        "descricao": "Adjust fidelity to the model and the AI's creative level."
+      },
+      {
+        "titulo": "Presets",
+        "descricao": "Ready-made styles for interiors, facades, and outdoor scenes."
+      },
+      {
+        "titulo": "Masks",
+        "descricao": "Edit specific areas while keeping the rest of the composition intact."
+      },
+      {
+        "titulo": "High Resolution",
+        "descricao": "Export renders in presentation-ready quality for clients."
+      },
+      {
+        "titulo": "Simple Interface",
+        "descricao": "Everything inside SketchUp, with no learning curve."
+      },
+      {
+        "titulo": "Frequent Updates",
+        "descricao": "New models and features released continuously."
+      }
+    ]
+  },
+  "galeria": {
+    "marcador": "SHOWCASE",
+    "titulo": "Real renders made by Kora users.",
+    "dica": "Drag to browse",
+    "categorias": {
+      "todos": "All",
+      "salas": "Living rooms",
+      "cozinhas": "Kitchens",
+      "quartos": "Bedrooms",
+      "banheiros": "Bathrooms",
+      "fachadas": "Facades",
+      "areas-externas": "Outdoor areas"
+    }
+  },
+  "videos": {
+    "marcador": "WALKTHROUGHS",
+    "titulo": "See Kora in action.",
+    "minutos": "min",
+    "itens": [
+      { "titulo": "Installation" },
+      { "titulo": "First Render" },
+      { "titulo": "Features" },
+      { "titulo": "Updates" }
+    ]
+  },
+  "compatibilidade": {
+    "marcador": "REQUIREMENTS",
+    "titulo": "Works with your setup.",
+    "suportado": "Supported",
+    "emBreve": "Coming soon"
+  },
+  "planos": {
+    "marcador": "INVESTMENT",
+    "titulo": "Choose the plan that's right for you.",
+    "subtitulo": "No hidden fees. Cancel anytime. 7-day guarantee.",
+    "colunaRecursos": "What's included",
+    "planos": [
+      {
+        "nome": "Monthly",
+        "preco": "$18",
+        "periodo": "/month",
+        "descricao": "Start with no commitment.",
+        "recursos": ["Unlimited renders", "All presets", "Email support"],
+        "rotuloCta": "Choose Monthly"
+      },
+      {
+        "nome": "Annual",
+        "preco": "$149",
+        "periodo": "/year",
+        "descricao": "Save 30% by paying annually.",
+        "recursos": ["Everything in Monthly", "Early access to features", "Priority support"],
+        "rotuloCta": "Choose Annual",
+        "selo": "Recommended"
+      },
+      {
+        "nome": "Lifetime",
+        "preco": "$379",
+        "periodo": "one-time",
+        "descricao": "Pay once. Use forever.",
+        "recursos": ["All future updates", "Permanent license", "Dedicated support"],
+        "rotuloCta": "Choose Lifetime"
+      }
+    ]
+  },
+  "depoimentos": {
+    "marcador": "TESTIMONIALS",
+    "titulo": "Professionals who transformed their workflow.",
+    "itens": [
+      {
+        "nome": "Lucas Andrade",
+        "cargo": "Architect",
+        "citacao": "Kora cut my rendering time by 80%. I present renders in the same meeting where I design the project."
+      },
+      {
+        "nome": "Mariana Costa",
+        "cargo": "Interior Designer",
+        "citacao": "Finally a render inside SketchUp that looks real. My clients love the level of realism."
+      },
+      {
+        "nome": "Rafael Lima",
+        "cargo": "3D Artist",
+        "citacao": "The combination of AI plus manual controls is brilliant. I get model fidelity when I want it and creative freedom when I need it."
+      }
+    ]
+  },
+  "perguntasFrequentes": {
+    "marcador": "QUESTIONS",
+    "titulo": "Frequently asked questions.",
+    "textoAjuda": "Can't find your answer? Reach us at",
+    "itens": [
+      {
+        "pergunta": "Does Kora Render work offline?",
+        "resposta": "No. Kora uses cloud processing to generate AI renders, so an internet connection is required during use."
+      },
+      {
+        "pergunta": "Do I need a powerful graphics card?",
+        "resposta": "No. All the heavy processing happens on our servers. Your computer just needs to run SketchUp normally."
+      },
+      {
+        "pergunta": "Can I use it for commercial projects?",
+        "resposta": "Yes. All Kora licenses, including the monthly plan, allow unlimited use in commercial and client projects."
+      },
+      {
+        "pergunta": "Is there a Mac version?",
+        "resposta": "The macOS version is in development and coming soon. Kora is currently available for Windows only."
+      },
+      {
+        "pergunta": "What is the refund policy?",
+        "resposta": "We offer a 7-day guarantee on all plans. If Kora doesn't meet your expectations, we refund 100% of the amount paid."
+      }
+    ]
+  },
+  "chamadaAcao": {
+    "tituloAntes": "Start rendering with AI ",
+    "tituloDestaque": "today.",
+    "descricao": "Join thousands of architects delivering faster, with more quality.",
+    "rotuloPrimario": "Buy Now",
+    "rotuloSecundario": "Watch Demo"
+  },
+  "rodape": {
+    "descricao": "AI rendering for SketchUp. Built for architects and designers.",
+    "copyright": "© 2026 Kora Render. All rights reserved.",
+    "grupos": {
+      "produto": {
+        "titulo": "Product",
+        "funcionalidades": "Features",
+        "planos": "Pricing",
+        "galeria": "Gallery"
+      },
+      "empresa": { "titulo": "Company", "sobre": "About", "contato": "Contact", "blog": "Blog" },
+      "legal": { "titulo": "Legal", "privacidade": "Privacy", "termos": "Terms" }
+    }
+  },
+  "idioma": {
+    "rotulo": "Language",
+    "pt-BR": "Português (Brasil)",
+    "en": "English"
+  }
+}

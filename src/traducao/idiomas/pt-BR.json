@@ -1,0 +1,228 @@
+{
+  "navegacao": {
+    "comoFunciona": "Como funciona",
+    "funcionalidades": "Recursos",
+    "galeria": "Galeria",
+    "planos": "Planos",
+    "faq": "FAQ",
+    "cta": "Comprar"
+  },
+  "destaque": {
+    "marcador": "PLUGIN OFICIAL SKETCHUP",
+    "tituloAntes": "Renderizações com ",
+    "tituloDestaque": "Inteligência Artificial",
+    "tituloDepois": " direto no SketchUp.",
+    "descricao": "Transforme seu modelo em uma imagem fotorrealista em segundos. Sem setup complexo, sem placa de vídeo cara, sem sair do SketchUp.",
+    "ctaPrimario": "Comprar Agora",
+    "ctaSecundario": "Assistir Demonstração",
+    "avaliacaoContagem": "+12.000",
+    "avaliacaoRotulo": "arquitetos e designers",
+    "previaStatus": "Renderizando",
+    "previaPreset": "Preset: Interior · Golden Hour",
+    "legendaFigura": ""
+  },
+  "antesDepois": {
+    "marcador": "PROVA VISUAL",
+    "titulo": "Do modelo cru ao render fotorrealista.",
+    "descricao": "Arraste a régua para comparar. A mesma cena do SketchUp, transformada pelo Kora em segundos.",
+    "rotuloAntes": "SketchUp",
+    "rotuloDepois": "Kora Render"
+  },
+  "faixaVersoes": {
+    "rotulo": "Compatível com"
+  },
+  "comoFunciona": {
+    "marcador": "PROCESSO",
+    "titulo": "Três passos. Um clique. Resultado profissional.",
+    "etapas": [
+      {
+        "titulo": "Instale o plugin",
+        "descricao": "Baixe o instalador, adicione sua chave de API e ative o Kora dentro do SketchUp em menos de 1 minuto."
+      },
+      {
+        "titulo": "Abra sua cena",
+        "descricao": "Use qualquer modelo, com qualquer nível de detalhe. O Kora entende o resto."
+      },
+      {
+        "titulo": "Gere imagens incríveis",
+        "descricao": "Escolha um preset, clique em renderizar e receba o resultado fotorrealista."
+      }
+    ]
+  },
+  "funcionalidades": {
+    "marcador": "RECURSOS",
+    "titulo": "Tudo o que você precisa para renderizar com confiança.",
+    "itens": [
+      {
+        "titulo": "Renderização por IA",
+        "descricao": "Imagens fotorrealistas geradas em segundos a partir do seu modelo."
+      },
+      {
+        "titulo": "Reflexos Inteligentes",
+        "descricao": "Iluminação e reflexos que respeitam materiais e contexto da cena."
+      },
+      {
+        "titulo": "Controle de Intensidade",
+        "descricao": "Ajuste a fidelidade ao modelo e o nível criativo da IA."
+      },
+      {
+        "titulo": "Presets",
+        "descricao": "Estilos prontos para interiores, fachadas e ambientações externas."
+      },
+      {
+        "titulo": "Máscaras",
+        "descricao": "Edite áreas específicas mantendo o resto da composição intacto."
+      },
+      {
+        "titulo": "Alta Resolução",
+        "descricao": "Exporte renders em qualidade de apresentação para clientes."
+      },
+      {
+        "titulo": "Interface Simples",
+        "descricao": "Tudo dentro do SketchUp, sem curvas de aprendizado."
+      },
+      {
+        "titulo": "Atualizações Frequentes",
+        "descricao": "Modelos e recursos novos lançados continuamente."
+      }
+    ]
+  },
+  "galeria": {
+    "marcador": "ACERVO",
+    "titulo": "Renders reais feitos por quem usa o Kora.",
+    "dica": "Arraste para navegar",
+    "categorias": {
+      "todos": "Todos",
+      "salas": "Salas",
+      "cozinhas": "Cozinhas",
+      "quartos": "Quartos",
+      "banheiros": "Banheiros",
+      "fachadas": "Fachadas",
+      "areas-externas": "Áreas externas"
+    }
+  },
+  "videos": {
+    "marcador": "DEMONSTRAÇÕES",
+    "titulo": "Veja o Kora em ação.",
+    "minutos": "min",
+    "itens": [
+      { "titulo": "Instalação" },
+      { "titulo": "Primeiro Render" },
+      { "titulo": "Recursos" },
+      { "titulo": "Atualizações" }
+    ]
+  },
+  "compatibilidade": {
+    "marcador": "REQUISITOS",
+    "titulo": "Funciona com o seu setup.",
+    "suportado": "Suportado",
+    "emBreve": "Em breve"
+  },
+  "planos": {
+    "marcador": "INVESTIMENTO",
+    "titulo": "Escolha o plano ideal para você.",
+    "subtitulo": "Sem taxas escondidas. Cancele quando quiser. Garantia de 7 dias.",
+    "colunaRecursos": "O que está incluso",
+    "planos": [
+      {
+        "nome": "Mensal",
+        "preco": "R$ 89",
+        "periodo": "/mês",
+        "descricao": "Comece sem compromisso.",
+        "recursos": ["Renderizações ilimitadas", "Todos os presets", "Suporte por e-mail"],
+        "rotuloCta": "Escolher Mensal"
+      },
+      {
+        "nome": "Anual",
+        "preco": "R$ 749",
+        "periodo": "/ano",
+        "descricao": "Economize 30% pagando anualmente.",
+        "recursos": ["Tudo do plano mensal", "Acesso antecipado a recursos", "Suporte prioritário"],
+        "rotuloCta": "Escolher Anual",
+        "selo": "Recomendado"
+      },
+      {
+        "nome": "Vitalício",
+        "preco": "R$ 1.890",
+        "periodo": "única vez",
+        "descricao": "Pague uma vez. Use para sempre.",
+        "recursos": ["Todas as atualizações futuras", "Licença permanente", "Suporte dedicado"],
+        "rotuloCta": "Escolher Vitalício"
+      }
+    ]
+  },
+  "depoimentos": {
+    "marcador": "RELATOS",
+    "titulo": "Profissionais que mudaram seu fluxo de trabalho.",
+    "itens": [
+      {
+        "nome": "Lucas Andrade",
+        "cargo": "Arquiteto",
+        "citacao": "O Kora cortou meu tempo de render em 80%. Apresento renders na mesma reunião em que desenho o projeto."
+      },
+      {
+        "nome": "Mariana Costa",
+        "cargo": "Designer de Interiores",
+        "citacao": "Finalmente um render dentro do SketchUp que parece de verdade. Meus clientes amam o nível de realismo."
+      },
+      {
+        "nome": "Rafael Lima",
+        "cargo": "Artista 3D",
+        "citacao": "A combinação de IA + controles manuais é genial. Tenho fidelidade ao modelo quando quero e liberdade criativa quando preciso."
+      }
+    ]
+  },
+  "perguntasFrequentes": {
+    "marcador": "DÚVIDAS",
+    "titulo": "Perguntas frequentes.",
+    "textoAjuda": "Não encontrou sua resposta? Fale com a gente em",
+    "itens": [
+      {
+        "pergunta": "O Kora Render funciona offline?",
+        "resposta": "Não. O Kora utiliza processamento em nuvem para gerar as renderizações por IA, então é necessária uma conexão com a internet durante o uso."
+      },
+      {
+        "pergunta": "Preciso de uma placa de vídeo potente?",
+        "resposta": "Não. Todo o processamento pesado acontece em nossos servidores. Seu computador só precisa rodar o SketchUp normalmente."
+      },
+      {
+        "pergunta": "Posso usar em projetos comerciais?",
+        "resposta": "Sim. Todas as licenças do Kora, incluindo o plano mensal, permitem uso ilimitado em projetos comerciais e para clientes."
+      },
+      {
+        "pergunta": "Existe versão para Mac?",
+        "resposta": "A versão para macOS está em desenvolvimento e chega em breve. Atualmente o Kora está disponível apenas para Windows."
+      },
+      {
+        "pergunta": "Qual a política de reembolso?",
+        "resposta": "Oferecemos garantia de 7 dias em todos os planos. Se o Kora não atender suas expectativas, devolvemos 100% do valor pago."
+      }
+    ]
+  },
+  "chamadaAcao": {
+    "tituloAntes": "Comece a renderizar com IA ",
+    "tituloDestaque": "hoje mesmo.",
+    "descricao": "Junte-se a milhares de arquitetos que entregam mais rápido, com mais qualidade.",
+    "rotuloPrimario": "Comprar Agora",
+    "rotuloSecundario": "Ver Demonstração"
+  },
+  "rodape": {
+    "descricao": "Renderização com IA para SketchUp. Feito para arquitetos e designers.",
+    "copyright": "© 2026 Kora Render. Todos os direitos reservados.",
+    "grupos": {
+      "produto": {
+        "titulo": "Produto",
+        "funcionalidades": "Recursos",
+        "planos": "Planos",
+        "galeria": "Galeria"
+      },
+      "empresa": { "titulo": "Empresa", "sobre": "Sobre", "contato": "Contato", "blog": "Blog" },
+      "legal": { "titulo": "Legal", "privacidade": "Privacidade", "termos": "Termos" }
+    }
+  },
+  "idioma": {
+    "rotulo": "Idioma",
+    "pt-BR": "Português (Brasil)",
+    "en": "English"
+  }
+}

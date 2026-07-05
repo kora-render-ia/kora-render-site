@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== Cores base — tema "mesa de desenho" ===== */
+  --color-fundo: #0a0a0c;
+  --color-fundo-elevado: #0f0f12;
+  --color-superficie: #131316;
+  --color-superficie-hover: #19191d;
+  --color-borda: #232327;
+  --color-borda-forte: #333338;
+  --color-borda-tecnica: #2a3538;
+
+  /* Marca (âmbar contido, não neon) */
+  --color-marca: #e8a63d;
+  --color-marca-escura: #c1841f;
+  --color-marca-suave: rgba(232, 166, 61, 0.1);
+
+  /* Acento técnico (azul-acinzentado — linhas de projeto) */
+  --color-acento: #6f92a8;
+  --color-acento-suave: rgba(111, 146, 168, 0.12);
+
+  /* Texto */
+  --color-texto-primario: #f3f2ee;
+  --color-texto-secundario: #98979c;
+  --color-texto-suave: #5e5d62;
+
+  /* Tipografia */
+  --font-titulo: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --font-corpo: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Raios — quase retos, com um leve chanfro nos botões via clip-path */
+  --radius-quadro: 2px;
+  --radius-selo: 3px;
+
+  --shadow-quadro: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-fundo);
+  color: var(--color-texto-primario);
+  font-family: var(--font-corpo);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-marca);
+  color: #16130a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-fundo);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-borda-forte);
+}
+
+:focus-visible {
+  outline: 1.5px solid var(--color-marca);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.equilibrio-texto {
+  text-wrap: balance;
+}
+
+/* Papel de plano técnico: grade de pontos finos + réguas nas bordas */
+.textura-plano {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.textura-plano-diagonal {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+}
+
+/* Mira / crosshair decorativo */
+.mira::before,
+.mira::after {
+  content: "";
+  position: absolute;
+  background: var(--color-borda-forte);
+}
+.mira::before {
+  width: 13px;
+  height: 1px;
+}
+.mira::after {
+  width: 1px;
+  height: 13px;
+}
+
+/* Corte de canto para botões e blocos técnicos */
+.corte-canto {
+  clip-path: polygon(
+    0 10px,
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+}
+.corte-canto-sm {
+  clip-path: polygon(0 6px, 6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
+}
+
+.numero-tecnico {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
