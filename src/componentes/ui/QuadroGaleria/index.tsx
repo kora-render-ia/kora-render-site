@@ -15,14 +15,11 @@ export default function QuadroGaleria({ item, indice }: PropriedadesQuadroGaleri
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 24 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: (indice % 6) * 0.04 }}
-      className={mesclarClasses(
-        "w-[260px] shrink-0 snap-start sm:w-[320px]",
-        item.destaqueVertical && "sm:w-[280px]"
-      )}
+      className="w-full"
     >
       <MoldeCantos>
         <div

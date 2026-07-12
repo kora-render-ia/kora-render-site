@@ -19,7 +19,7 @@ export const idsCategoriasGaleria = [
 export const itensGaleria: ItemGaleria[] = [
   { id: "galeria-cozinha-1", imagem: cozinha1, categoria: "cozinhas", destaqueVertical: true },
   { id: "galeria-sala-1", imagem: sala1, categoria: "salas" },
-  { id: "galeria-fachada-1", imagem: fachada1, categoria: "fachadas" },
+  { id: "galeria-fachada-1", imagem: fachada1, categoria: "fachadas", destaqueVertical: true },
   { id: "galeria-quarto-1", imagem: quarto1, categoria: "quartos" },
   {
     id: "galeria-externa-1",
