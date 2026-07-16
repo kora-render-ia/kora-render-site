@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import MoldeCantos from "../MoldeCantos";
-import { mesclarClasses } from "../../../utilitarios/mesclarClasses";
 import type { ItemGaleria } from "../../../tipos";
 
 interface PropriedadesQuadroGaleria {
   item: ItemGaleria;
   indice: number;
+  aoClicar: (item: ItemGaleria) => void;
 }
 
-export default function QuadroGaleria({ item, indice }: PropriedadesQuadroGaleria) {
+export default function QuadroGaleria({ item, indice, aoClicar }: PropriedadesQuadroGaleria) {
   const { t } = useTranslation();
   const rotulo = t(`galeria.categorias.${item.categoria}`);
 
@@ -22,19 +22,18 @@ export default function QuadroGaleria({ item, indice }: PropriedadesQuadroGaleri
       className="w-full"
     >
       <MoldeCantos>
-        <div
-          className={mesclarClasses(
-            "overflow-hidden border border-borda bg-superficie",
-            item.destaqueVertical ? "aspect-[3/4]" : "aspect-[4/3]"
-          )}
+        <button
+          type="button"
+          onClick={() => aoClicar(item)}
+          className="block w-full cursor-zoom-in overflow-hidden border border-borda bg-superficie"
         >
           <img
             src={item.imagem}
             alt={`${t("galeria.titulo")} — ${rotulo}`}
             loading="lazy"
-            className="h-full w-full object-cover grayscale-[15%] transition-all duration-500 hover:grayscale-0"
+            className="h-auto w-full grayscale-[15%] transition-all duration-500 hover:grayscale-0"
           />
-        </div>
+        </button>
       </MoldeCantos>
       <div className="numero-tecnico mt-2.5 flex items-center justify-between text-[11px] text-texto-suave">
         <span className="uppercase tracking-wide">{rotulo}</span>

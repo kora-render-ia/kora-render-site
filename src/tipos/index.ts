@@ -5,7 +5,6 @@ export interface ItemGaleria {
   id: string;
   imagem: string;
   categoria: IdCategoriaGaleria;
-  destaqueVertical?: boolean;
 }
 
 export interface ItemCompatibilidade {
