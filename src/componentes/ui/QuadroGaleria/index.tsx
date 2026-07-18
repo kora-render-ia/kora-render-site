@@ -25,13 +25,13 @@ export default function QuadroGaleria({ item, indice, aoClicar }: PropriedadesQu
         <button
           type="button"
           onClick={() => aoClicar(item)}
-          className="block w-full cursor-zoom-in overflow-hidden border border-borda bg-superficie"
+          className="block aspect-[4/3] w-full cursor-zoom-in overflow-hidden border border-borda bg-superficie sm:aspect-auto"
         >
           <img
             src={item.imagem}
             alt={`${t("galeria.titulo")} — ${rotulo}`}
             loading="lazy"
-            className="h-auto w-full grayscale-[15%] transition-all duration-500 hover:grayscale-0"
+            className="h-full w-full object-cover grayscale-[15%] transition-all duration-500 hover:grayscale-0 sm:h-auto"
           />
         </button>
       </MoldeCantos>

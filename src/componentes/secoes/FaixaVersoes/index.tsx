@@ -22,7 +22,7 @@ export default function FaixaVersoes() {
           {versoesSketchUp.map((versao) => (
             <li
               key={versao}
-              className="numero-tecnico border border-borda px-2.5 py-1 text-[11px] text-texto-secundario"
+              className="numero-tecnico rounded-selo border border-borda bg-fundo-elevado px-2.5 py-1 text-[11px] text-texto-secundario"
             >
               SketchUp {versao}
             </li>

@@ -49,7 +49,7 @@ export default function SeletorIdioma({ className }: PropriedadesSeletorIdioma) 
         aria-haspopup="listbox"
         aria-expanded={aberto}
         aria-label={t("idioma.rotulo")}
-        className="flex items-center gap-1.5 border border-borda px-2 py-1.5 text-texto-secundario transition-colors hover:border-borda-forte hover:text-texto-primario"
+        className="flex items-center gap-1.5 rounded-lg border border-borda px-2 py-1.5 text-texto-secundario transition-colors hover:border-borda-forte hover:text-texto-primario"
       >
         <BandeiraAtual tamanho={15} />
         <HiChevronDown
@@ -67,7 +67,7 @@ export default function SeletorIdioma({ className }: PropriedadesSeletorIdioma) 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 top-full z-50 mt-2 w-44 border border-borda bg-fundo-elevado py-1"
+            className="absolute right-0 top-full z-50 mt-2 w-44 rounded-xl border border-borda bg-fundo-elevado py-1 shadow-suave"
           >
             {opcoesIdioma.map((opcao) => {
               const Bandeira = mapaBandeiras[opcao.codigo];

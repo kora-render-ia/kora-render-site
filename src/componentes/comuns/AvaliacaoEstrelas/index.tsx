@@ -23,7 +23,7 @@ export default function AvaliacaoEstrelas({
         <FaStar
           key={i}
           size={tamanho}
-          className={i < nota ? "text-marca" : "text-borda-forte"}
+          className={i < nota ? "text-acento" : "text-borda-forte"}
           aria-hidden="true"
         />
       ))}

@@ -20,19 +20,10 @@ export default function Galeria() {
           titulo={t("galeria.titulo")}
         />
 
-        <div className="grid grid-cols-3 gap-3">
-          {[0, 1, 2].map((coluna) => (
-            <div key={coluna} className="flex flex-col gap-3">
-              {itensGaleria
-                .filter((_, i) => i % 3 === coluna)
-                .map((item, i) => (
-                  <QuadroGaleria
-                    key={item.id}
-                    item={item}
-                    indice={i * 3 + coluna}
-                    aoClicar={definirItemSelecionado}
-                  />
-                ))}
+        <div className="columns-1 gap-3 sm:columns-3">
+          {itensGaleria.map((item, i) => (
+            <div key={item.id} className="mb-3 break-inside-avoid">
+              <QuadroGaleria item={item} indice={i} aoClicar={definirItemSelecionado} />
             </div>
           ))}
         </div>

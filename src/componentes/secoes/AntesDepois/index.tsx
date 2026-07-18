@@ -37,22 +37,21 @@ export default function AntesDepois() {
               className="absolute inset-0 h-full w-full object-cover"
               draggable={false}
             />
-            <span className="numero-tecnico absolute right-4 top-4 border border-marca/40 bg-fundo/80 px-2.5 py-1 text-[11px] uppercase text-marca">
+            <span className="numero-tecnico absolute right-4 top-4 rounded-selo border border-marca/40 bg-fundo-elevado/85 px-2.5 py-1 text-[11px] uppercase text-marca backdrop-blur-sm">
               {rotuloDepois}
             </span>
 
             <div
-              className="absolute inset-y-0 left-0 overflow-hidden"
-              style={{ width: `${posicao}%` }}
+              className="absolute inset-0"
+              style={{ clipPath: `inset(0 ${100 - posicao}% 0 0)` }}
             >
               <img
                 src={imagensAntesDepois.antes}
                 alt={`${t("antesDepois.titulo")} — ${rotuloAntes}`}
-                className="absolute inset-0 h-full object-cover"
-                style={{ width: "100%", maxWidth: "none" }}
+                className="absolute inset-0 h-full w-full object-cover"
                 draggable={false}
               />
-              <span className="numero-tecnico absolute left-4 top-4 border border-borda-forte bg-fundo/85 px-2.5 py-1 text-[11px] uppercase text-texto-primario">
+              <span className="numero-tecnico absolute left-4 top-4 rounded-selo border border-borda-forte bg-fundo-elevado/85 px-2.5 py-1 text-[11px] uppercase text-texto-primario backdrop-blur-sm">
                 {rotuloAntes}
               </span>
             </div>
@@ -67,7 +66,7 @@ export default function AntesDepois() {
                 aria-valuenow={Math.round(posicao)}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                className="corte-canto-sm absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center border border-marca bg-fundo text-marca"
+                className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full border border-marca bg-fundo-elevado text-marca shadow-suave"
               >
                 <HiArrowsRightLeft size={15} aria-hidden="true" />
               </button>

@@ -48,7 +48,7 @@ export default function CartaoFuncionalidade({
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: (indice % 4) * 0.06 }}
       className={mesclarClasses(
-        "group relative flex flex-col justify-between border border-borda bg-superficie/50 p-5 transition-colors duration-200 hover:border-marca/40",
+        "group relative flex flex-col justify-between rounded-quadro border border-borda bg-fundo-elevado p-5 shadow-suave transition-colors duration-200 hover:border-marca/40",
         destacado && "sm:col-span-2 sm:row-span-2 sm:p-7"
       )}
     >

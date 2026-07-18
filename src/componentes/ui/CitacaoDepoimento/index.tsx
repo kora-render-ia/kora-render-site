@@ -39,7 +39,7 @@ export default function CitacaoDepoimento({
       <div className="flex items-start gap-3 sm:flex-col sm:items-end sm:text-right">
         <div className="flex items-center gap-3 sm:flex-row-reverse">
           <div
-            className="flex h-9 w-9 shrink-0 items-center justify-center border border-borda-forte text-xs font-semibold text-texto-secundario"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-borda-forte bg-fundo-elevado text-xs font-semibold text-texto-secundario"
             aria-hidden="true"
           >
             {iniciais}

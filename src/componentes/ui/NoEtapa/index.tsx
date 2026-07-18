@@ -16,7 +16,7 @@ export default function NoEtapa({ numero, titulo, descricao, indice }: Proprieda
       transition={{ duration: 0.5, delay: indice * 0.12 }}
       className="relative flex gap-6 pb-14 last:pb-0"
     >
-      <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center border border-marca bg-fundo">
+      <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-marca bg-fundo-elevado shadow-suave">
         <span className="numero-tecnico text-sm text-marca">{numero}</span>
       </div>
       <div className="pt-1.5">

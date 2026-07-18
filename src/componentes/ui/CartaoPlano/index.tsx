@@ -30,12 +30,12 @@ export default function CartaoPlano({
   const conteudo = (
     <div
       className={mesclarClasses(
-        "flex h-full flex-col border border-borda p-6",
-        emDestaque && "border-marca/50 bg-superficie/40"
+        "flex h-full flex-col rounded-quadro border border-borda bg-fundo-elevado p-6 shadow-suave",
+        emDestaque && "border-marca/50"
       )}
     >
       {selo && (
-        <span className="numero-tecnico mb-4 inline-flex w-fit items-center gap-1.5 border border-marca/40 bg-marca-suave px-2.5 py-1 text-[10px] uppercase tracking-wider text-marca">
+        <span className="numero-tecnico mb-4 inline-flex w-fit items-center gap-1.5 rounded-selo border border-marca/40 bg-marca-suave px-2.5 py-1 text-[10px] uppercase tracking-wider text-marca">
           {selo}
         </span>
       )}

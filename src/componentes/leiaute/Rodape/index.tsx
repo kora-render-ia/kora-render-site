@@ -36,7 +36,7 @@ export default function Rodape() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <a href="#destaque" className="flex items-center gap-2.5 text-texto-primario">
-              <span className="corte-canto-sm flex h-7 w-7 items-center justify-center bg-marca text-[13px] font-bold text-[#171208]">
+              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-marca text-[13px] font-bold text-white">
                 K
               </span>
               <span className="font-titulo text-lg font-semibold">{NOME_SITE}</span>

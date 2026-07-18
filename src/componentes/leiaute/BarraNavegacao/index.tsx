@@ -30,7 +30,7 @@ export default function BarraNavegacao() {
     >
       <nav className="mx-auto flex h-16 w-full max-w-[90rem] items-center justify-between px-6 lg:px-12">
         <a href="#destaque" className="flex items-center gap-2.5 text-texto-primario">
-          <span className="corte-canto-sm flex h-7 w-7 items-center justify-center bg-marca text-[13px] font-bold text-[#171208]">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-marca text-[13px] font-bold text-white">
             K
           </span>
           <span className="font-titulo text-lg font-semibold">{NOME_SITE}</span>

@@ -39,7 +39,7 @@ export default function ItemPergunta({
         <span className="flex-1 text-sm font-medium text-texto-primario">{pergunta}</span>
         <span
           className={mesclarClasses(
-            "flex h-5 w-5 shrink-0 items-center justify-center border",
+            "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border",
             aberto ? "border-marca text-marca" : "border-borda-forte text-texto-suave"
           )}
           aria-hidden="true"

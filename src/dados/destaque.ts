@@ -1,4 +1,4 @@
-import imagemPreviaDestaque from "../ativos/imagens/destaque-preview.jpg";
+import imagemPreviaDestaque from "../ativos/imagens/destaque-preview.png";
 
 export const previaDestaque = {
   nomeApp: "Kora Render",

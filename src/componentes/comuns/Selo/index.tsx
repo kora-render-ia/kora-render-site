@@ -23,7 +23,7 @@ export default function Selo({
   return (
     <span
       className={mesclarClasses(
-        "numero-tecnico inline-flex items-center gap-2 border px-3 py-1.5 text-[11px] uppercase tracking-wider",
+        "numero-tecnico inline-flex items-center gap-2 rounded-selo border px-3 py-1.5 text-[11px] uppercase tracking-wider",
         estilosVariante[variante],
         className
       )}

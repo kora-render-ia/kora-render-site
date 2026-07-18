@@ -36,9 +36,9 @@ export default function Destaque() {
           initial={{ opacity: 0, y: -6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="numero-tecnico mb-6 inline-flex items-center gap-2 border border-borda px-3 py-1.5 text-[11px] uppercase tracking-wider text-marca"
+          className="numero-tecnico mb-6 inline-flex items-center gap-2 rounded-selo border border-borda bg-fundo-elevado px-3 py-1.5 text-[11px] uppercase tracking-wider text-marca"
         >
-          <span className="h-1 w-1 bg-marca" aria-hidden="true" />
+          <span className="h-1.5 w-1.5 rounded-full bg-marca" aria-hidden="true" />
           {t("destaque.marcador")}
         </motion.div>
 
@@ -78,8 +78,8 @@ export default function Destaque() {
             transition={{ duration: 0.75, delay: 0.26 }}
             className="ml-auto w-full max-w-xl"
           >
-            <MoldeCantos corCanto="marca">
-              <div className="overflow-hidden border border-borda bg-fundo-elevado">
+            <MoldeCantos>
+              <div className="bg-fundo-elevado">
                 <div className="flex items-center gap-2 border-b border-borda bg-superficie px-4 py-2.5">
                   <span className="h-2 w-2 rounded-full bg-[#ff5f57]" aria-hidden="true" />
                   <span className="h-2 w-2 rounded-full bg-[#febc2e]" aria-hidden="true" />
@@ -97,17 +97,17 @@ export default function Destaque() {
                   />
 
                   <div className="absolute inset-x-3 bottom-3 space-y-2">
-                    <div className="border border-white/10 bg-black/65 p-3 backdrop-blur-sm">
+                    <div className="rounded-xl border border-white/10 bg-black/55 p-3 backdrop-blur-sm">
                       <div className="numero-tecnico flex items-center justify-between text-[11px]">
                         <span className="text-white/80">{t("destaque.previaStatus")}</span>
-                        <span className="text-marca">{previaDestaque.progresso}%</span>
+                        <span className="text-acento">{previaDestaque.progresso}%</span>
                       </div>
-                      <div className="mt-2 h-[3px] w-full bg-white/10">
+                      <div className="mt-2 h-[3px] w-full overflow-hidden rounded-full bg-white/15">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${previaDestaque.progresso}%` }}
                           transition={{ duration: 1.3, delay: 0.7, ease: "easeOut" }}
-                          className="h-full bg-marca"
+                          className="h-full rounded-full bg-marca"
                         />
                       </div>
                     </div>
