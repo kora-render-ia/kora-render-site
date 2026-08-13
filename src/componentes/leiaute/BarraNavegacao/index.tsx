@@ -7,6 +7,7 @@ import { useRolagem } from "../../../ganchos/useRolagem";
 import { NOME_SITE } from "../../../constantes";
 import Botao from "../../comuns/Botao";
 import SeletorIdioma from "../../comuns/SeletorIdioma";
+import logoLumi from "../../../ativos/logo/lumi-completa.png";
 
 const itensNavegacao = [
   { chave: "comoFunciona", href: "#como-funciona" },
@@ -29,11 +30,8 @@ export default function BarraNavegacao() {
       )}
     >
       <nav className="mx-auto flex h-16 w-full max-w-[90rem] items-center justify-between px-6 lg:px-12">
-        <a href="#destaque" className="flex items-center gap-2.5 text-texto-primario">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-marca text-[13px] font-bold text-white">
-            K
-          </span>
-          <span className="font-titulo text-lg font-semibold">{NOME_SITE}</span>
+        <a href="#destaque" className="flex items-center text-texto-primario">
+          <img src={logoLumi} alt={NOME_SITE} className="h-8 w-auto object-contain" />
         </a>
 
         <ul className="hidden items-center gap-9 md:flex">

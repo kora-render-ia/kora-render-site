@@ -17,6 +17,7 @@
     "ctaSecundario": "Watch Demo",
     "avaliacaoContagem": "+12,000",
     "avaliacaoRotulo": "architects and designers",
+    "imagemPluginRotulo": "Plugin image",
     "previaStatus": "Rendering",
     "previaPreset": "Preset: Interior · Golden Hour",
     "legendaFigura": "FIG. 01 — Living room, rendered in 2.4s"
@@ -24,9 +25,9 @@
   "antesDepois": {
     "marcador": "VISUAL PROOF",
     "titulo": "From raw model to photorealistic render.",
-    "descricao": "Drag the ruler to compare. The same SketchUp scene, transformed by Kora in seconds.",
+    "descricao": "Drag the ruler to compare. The same SketchUp scene, transformed by Lumi in seconds.",
     "rotuloAntes": "SketchUp",
-    "rotuloDepois": "Kora Render"
+    "rotuloDepois": "Lumi Render"
   },
   "faixaVersoes": {
     "rotulo": "Compatible with"
@@ -37,11 +38,11 @@
     "etapas": [
       {
         "titulo": "Install the plugin",
-        "descricao": "Download the installer and activate Kora inside SketchUp in under 1 minute."
+        "descricao": "Download the installer and activate Lumi inside SketchUp in under 1 minute."
       },
       {
         "titulo": "Open your scene",
-        "descricao": "Use any model, at any level of detail. Kora understands the rest."
+        "descricao": "Use any model, at any level of detail. Lumi understands the rest."
       },
       {
         "titulo": "Generate stunning images",
@@ -89,7 +90,7 @@
   },
   "galeria": {
     "marcador": "SHOWCASE",
-    "titulo": "Real renders made by Kora users.",
+    "titulo": "Real renders made by Lumi users.",
     "dica": "Drag to browse",
     "categorias": {
       "todos": "All",
@@ -103,7 +104,7 @@
   },
   "videos": {
     "marcador": "WALKTHROUGHS",
-    "titulo": "See Kora in action.",
+    "titulo": "See Lumi in action.",
     "minutos": "min",
     "itens": [
       { "titulo": "Installation" },
@@ -158,7 +159,7 @@
       {
         "nome": "Lucas Andrade",
         "cargo": "Architect",
-        "citacao": "Kora cut my rendering time by 80%. I present renders in the same meeting where I design the project."
+        "citacao": "Lumi cut my rendering time by 80%. I present renders in the same meeting where I design the project."
       },
       {
         "nome": "Mariana Costa",
@@ -178,8 +179,8 @@
     "textoAjuda": "Can't find your answer? Reach us at",
     "itens": [
       {
-        "pergunta": "Does Kora Render work offline?",
-        "resposta": "No. Kora uses cloud processing to generate AI renders, so an internet connection is required during use."
+        "pergunta": "Does Lumi Render work offline?",
+        "resposta": "No. Lumi uses cloud processing to generate AI renders, so an internet connection is required during use."
       },
       {
         "pergunta": "Do I need a powerful graphics card?",
@@ -187,15 +188,15 @@
       },
       {
         "pergunta": "Can I use it for commercial projects?",
-        "resposta": "Yes. All Kora licenses, including the monthly plan, allow unlimited use in commercial and client projects."
+        "resposta": "Yes. All Lumi licenses, including the monthly plan, allow unlimited use in commercial and client projects."
       },
       {
         "pergunta": "Is there a Mac version?",
-        "resposta": "The macOS version is in development and coming soon. Kora is currently available for Windows only."
+        "resposta": "The macOS version is in development and coming soon. Lumi is currently available for Windows only."
       },
       {
         "pergunta": "What is the refund policy?",
-        "resposta": "We offer a 7-day guarantee on all plans. If Kora doesn't meet your expectations, we refund 100% of the amount paid."
+        "resposta": "We offer a 7-day guarantee on all plans. If Lumi doesn't meet your expectations, we refund 100% of the amount paid."
       }
     ]
   },
@@ -208,7 +209,7 @@
   },
   "rodape": {
     "descricao": "AI rendering for SketchUp. Built for architects and designers.",
-    "copyright": "© 2026 Kora Render. All rights reserved.",
+    "copyright": "© 2026 Lumi Render. All rights reserved.",
     "grupos": {
       "produto": {
         "titulo": "Product",

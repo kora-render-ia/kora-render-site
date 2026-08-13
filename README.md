@@ -1,4 +1,4 @@
-# Kora Render — Landing Page
+# Lumi Render — Landing Page
 
 Reescrita completa da aplicação: mesma missão, mesmo conteúdo, mesmos dados e as mesmas
 funcionalidades — arquitetura, identidade visual e nomenclatura totalmente reconstruídas.

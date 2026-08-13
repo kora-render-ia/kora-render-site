@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { HiOutlinePhoto } from "react-icons/hi2";
 import Contentor from "../../comuns/Contentor";
 import CabecalhoSecao from "../../comuns/CabecalhoSecao";
 import NoEtapa from "../../ui/NoEtapa";
+import MoldeCantos from "../../ui/MoldeCantos";
 
 interface EtapaTraducao {
   titulo: string;
@@ -44,6 +46,19 @@ export default function ComoFunciona() {
               descricao={etapa.descricao}
               indice={i}
             />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-2">
+          {[0, 1, 2].map((indice) => (
+            <MoldeCantos key={indice}>
+              <div className="flex aspect-[4/3] flex-col items-center justify-center gap-2 border border-dashed border-borda-forte bg-superficie text-texto-suave">
+                <HiOutlinePhoto size={28} aria-hidden="true" />
+                <span className="numero-tecnico text-[11px] uppercase tracking-wide">
+                  {t("destaque.imagemPluginRotulo")} {String(indice + 1).padStart(2, "0")}
+                </span>
+              </div>
+            </MoldeCantos>
           ))}
         </div>
       </Contentor>

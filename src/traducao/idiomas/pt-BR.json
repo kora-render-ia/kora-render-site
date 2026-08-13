@@ -17,6 +17,7 @@
     "ctaSecundario": "Assistir Demonstração",
     "avaliacaoContagem": "+12.000",
     "avaliacaoRotulo": "arquitetos e designers",
+    "imagemPluginRotulo": "Imagem do plugin",
     "previaStatus": "Renderizando",
     "previaPreset": "Preset: Interior · Golden Hour",
     "legendaFigura": ""
@@ -24,9 +25,9 @@
   "antesDepois": {
     "marcador": "PROVA VISUAL",
     "titulo": "Do modelo cru ao render fotorrealista.",
-    "descricao": "Arraste a régua para comparar. A mesma cena do SketchUp, transformada pelo Kora em segundos.",
+    "descricao": "Arraste a régua para comparar. A mesma cena do SketchUp, transformada pelo Lumi em segundos.",
     "rotuloAntes": "SketchUp",
-    "rotuloDepois": "Kora Render"
+    "rotuloDepois": "Lumi Render"
   },
   "faixaVersoes": {
     "rotulo": "Compatível com"
@@ -37,11 +38,11 @@
     "etapas": [
       {
         "titulo": "Instale o plugin",
-        "descricao": "Baixe o instalador, adicione sua chave de API e ative o Kora dentro do SketchUp em menos de 1 minuto."
+        "descricao": "Baixe o instalador, adicione sua chave de API e ative o Lumi dentro do SketchUp em menos de 1 minuto."
       },
       {
         "titulo": "Abra sua cena",
-        "descricao": "Use qualquer modelo, com qualquer nível de detalhe. O Kora entende o resto."
+        "descricao": "Use qualquer modelo, com qualquer nível de detalhe. O Lumi entende o resto."
       },
       {
         "titulo": "Gere imagens incríveis",
@@ -89,7 +90,7 @@
   },
   "galeria": {
     "marcador": "ACERVO",
-    "titulo": "Renders reais feitos por quem usa o Kora.",
+    "titulo": "Renders reais feitos por quem usa o Lumi.",
     "dica": "Arraste para navegar",
     "categorias": {
       "todos": "Todos",
@@ -103,7 +104,7 @@
   },
   "videos": {
     "marcador": "DEMONSTRAÇÕES",
-    "titulo": "Veja o Kora em ação.",
+    "titulo": "Veja o Lumi em ação.",
     "minutos": "min",
     "itens": [
       { "titulo": "Instalação" },
@@ -158,7 +159,7 @@
       {
         "nome": "Lucas Andrade",
         "cargo": "Arquiteto",
-        "citacao": "O Kora cortou meu tempo de render em 80%. Apresento renders na mesma reunião em que desenho o projeto."
+        "citacao": "O Lumi cortou meu tempo de render em 80%. Apresento renders na mesma reunião em que desenho o projeto."
       },
       {
         "nome": "Mariana Costa",
@@ -178,8 +179,8 @@
     "textoAjuda": "Não encontrou sua resposta? Fale com a gente em",
     "itens": [
       {
-        "pergunta": "O Kora Render funciona offline?",
-        "resposta": "Não. O Kora utiliza processamento em nuvem para gerar as renderizações por IA, então é necessária uma conexão com a internet durante o uso."
+        "pergunta": "O Lumi Render funciona offline?",
+        "resposta": "Não. O Lumi utiliza processamento em nuvem para gerar as renderizações por IA, então é necessária uma conexão com a internet durante o uso."
       },
       {
         "pergunta": "Preciso de uma placa de vídeo potente?",
@@ -187,15 +188,15 @@
       },
       {
         "pergunta": "Posso usar em projetos comerciais?",
-        "resposta": "Sim. Todas as licenças do Kora, incluindo o plano mensal, permitem uso ilimitado em projetos comerciais e para clientes."
+        "resposta": "Sim. Todas as licenças do Lumi, incluindo o plano mensal, permitem uso ilimitado em projetos comerciais e para clientes."
       },
       {
         "pergunta": "Existe versão para Mac?",
-        "resposta": "A versão para macOS está em desenvolvimento e chega em breve. Atualmente o Kora está disponível apenas para Windows."
+        "resposta": "A versão para macOS está em desenvolvimento e chega em breve. Atualmente o Lumi está disponível apenas para Windows."
       },
       {
         "pergunta": "Qual a política de reembolso?",
-        "resposta": "Oferecemos garantia de 7 dias em todos os planos. Se o Kora não atender suas expectativas, devolvemos 100% do valor pago."
+        "resposta": "Oferecemos garantia de 7 dias em todos os planos. Se o Lumi não atender suas expectativas, devolvemos 100% do valor pago."
       }
     ]
   },
@@ -208,7 +209,7 @@
   },
   "rodape": {
     "descricao": "Renderização com IA para SketchUp. Feito para arquitetos e designers.",
-    "copyright": "© 2026 Kora Render. Todos os direitos reservados.",
+    "copyright": "© 2026 Lumi Render. Todos os direitos reservados.",
     "grupos": {
       "produto": {
         "titulo": "Produto",

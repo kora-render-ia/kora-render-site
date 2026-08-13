@@ -4,7 +4,7 @@ import sala1 from "../ativos/imagens/galeria/sala-1.png";
 import fachada1 from "../ativos/imagens/galeria/fachada-1.png";
 import quarto1 from "../ativos/imagens/galeria/quarto-1.png";
 import externa1 from "../ativos/imagens/galeria/externa-1.png";
-import banheiro1 from "../ativos/imagens/galeria/banheiro-1.jpg";
+import banheiro1 from "../ativos/imagens/galeria/banheiro-1.png";
 
 export const idsCategoriasGaleria = [
   "todos",

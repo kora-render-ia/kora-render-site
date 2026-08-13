@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import Contentor from "../../comuns/Contentor";
 import { NOME_SITE } from "../../../constantes";
+import logoLumi from "../../../ativos/logo/lumi-completa.png";
 
 const redesSociais = [
   { id: "instagram", Icone: FaInstagram, href: "#" },
@@ -35,11 +36,8 @@ export default function Rodape() {
       <Contentor className="py-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <a href="#destaque" className="flex items-center gap-2.5 text-texto-primario">
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-marca text-[13px] font-bold text-white">
-                K
-              </span>
-              <span className="font-titulo text-lg font-semibold">{NOME_SITE}</span>
+            <a href="#destaque" className="flex items-center text-texto-primario">
+              <img src={logoLumi} alt={NOME_SITE} className="h-8 w-auto object-contain" />
             </a>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-texto-secundario">
               {t("rodape.descricao")}

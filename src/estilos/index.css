@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* ===== Cores base — identidade "estúdio de arquitetura" ===== */
-  --color-fundo: #f8f7f4;
+  /* ===== Cores base — identidade "azul-acinzentado premium" ===== */
+  --color-fundo: #f7f8f9;
   --color-fundo-elevado: #ffffff;
-  --color-superficie: #f1f1ee;
-  --color-superficie-hover: #eae9e4;
-  --color-borda: #dddcd7;
-  --color-borda-forte: #c9c7c0;
+  --color-superficie: #eff1f3;
+  --color-superficie-hover: #e6e9ec;
+  --color-borda: #dcdfe2;
+  --color-borda-forte: #c5c9ce;
 
-  /* Marca (verde salva contido) */
-  --color-marca: #7f9b8b;
-  --color-marca-escura: #5e7868;
-  --color-marca-suave: rgba(127, 155, 139, 0.12);
+  /* Marca (azul-petróleo) */
+  --color-marca: #3e6680;
+  --color-marca-escura: #2c4b5e;
+  --color-marca-suave: rgba(62, 102, 128, 0.12);
 
-  /* Acento secundário (bege quente) */
-  --color-acento: #d6c8b8;
-  --color-acento-suave: rgba(214, 200, 184, 0.28);
+  /* Acento secundário (bronze quente) */
+  --color-acento: #c9a97e;
+  --color-acento-suave: rgba(201, 169, 126, 0.28);
 
   /* Texto */
-  --color-texto-primario: #2c2c2a;
-  --color-texto-secundario: #6e6e69;
-  --color-texto-suave: #9b9a94;
+  --color-texto-primario: #232527;
+  --color-texto-secundario: #6b6e72;
+  --color-texto-suave: #9a9ca3;
 
   /* Tipografia */
   --font-titulo: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;

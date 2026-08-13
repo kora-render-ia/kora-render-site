@@ -1,5 +1,5 @@
-export const NOME_SITE = "Kora";
-export const EMAIL_CONTATO = "suporte@kora.app";
+export const NOME_SITE = "Lumi";
+export const EMAIL_CONTATO = "suporte@lumi.app";
 
 export const IDS_SECAO = {
   destaque: "destaque",

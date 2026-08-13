@@ -1,5 +1,5 @@
 {
-  "name": "kora-render",
+  "name": "lumi-render",
   "private": true,
   "version": "0.0.0",
   "type": "module",
