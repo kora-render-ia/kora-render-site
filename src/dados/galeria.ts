@@ -1,10 +1,10 @@
 import type { ItemGaleria } from "../tipos";
-import cozinha1 from "../ativos/imagens/galeria/cozinha-1.png";
-import sala1 from "../ativos/imagens/galeria/sala-1.png";
-import fachada1 from "../ativos/imagens/galeria/fachada-1.png";
-import quarto1 from "../ativos/imagens/galeria/quarto-1.png";
-import externa1 from "../ativos/imagens/galeria/externa-1.png";
-import banheiro1 from "../ativos/imagens/galeria/banheiro-1.png";
+import cozinha1 from "../ativos/imagens/galeria/cozinha-1.webp";
+import sala1 from "../ativos/imagens/galeria/sala-1.webp";
+import fachada1 from "../ativos/imagens/galeria/fachada-1.webp";
+import quarto1 from "../ativos/imagens/galeria/quarto-1.webp";
+import externa1 from "../ativos/imagens/galeria/externa-1.webp";
+import banheiro1 from "../ativos/imagens/galeria/banheiro-1.webp";
 
 export const idsCategoriasGaleria = [
   "todos",

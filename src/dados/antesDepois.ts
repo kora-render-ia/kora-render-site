@@ -1,13 +1,13 @@
-import imagemAntes from "../ativos/imagens/antes-sketchup.png";
-import imagemDepois from "../ativos/imagens/depois-render.png";
-import imagemAntes1 from "../ativos/imagens/quarto-antes.png";
-import imagemDepois1 from "../ativos/imagens/quarto-depois.png";
-import imagemAntes2 from "../ativos/imagens/sala-casa-praia-antes.png";
-import imagemDepois2 from "../ativos/imagens/sala-casa-praia-depois.png";
-import imagemAntes3 from "../ativos/imagens/casa-concreto-antes.png";
-import imagemDepois3 from "../ativos/imagens/casa-concreto-depois.png";
-import closeUpPiscina1 from "../ativos/imagens/closeup-piscina-1.png";
-import closeUpPiscina2 from "../ativos/imagens/closeup-piscina-2.png";
+import imagemAntes from "../ativos/imagens/antes-sketchup.webp";
+import imagemDepois from "../ativos/imagens/depois-render.webp";
+import imagemAntes1 from "../ativos/imagens/quarto-antes.webp";
+import imagemDepois1 from "../ativos/imagens/quarto-depois.webp";
+import imagemAntes2 from "../ativos/imagens/sala-casa-praia-antes.webp";
+import imagemDepois2 from "../ativos/imagens/sala-casa-praia-depois.webp";
+import imagemAntes3 from "../ativos/imagens/casa-concreto-antes.webp";
+import imagemDepois3 from "../ativos/imagens/casa-concreto-depois.webp";
+import closeUpPiscina1 from "../ativos/imagens/closeup-piscina-1.webp";
+import closeUpPiscina2 from "../ativos/imagens/closeup-piscina-2.webp";
 
 export const imagensAntesDepois = {
   antes: imagemAntes,
