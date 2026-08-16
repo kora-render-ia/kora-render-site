@@ -47,7 +47,7 @@ export default function ComparadorAntesDepois({
         decoding="async"
         fetchPriority={prioridade ? "high" : "auto"}
       />
-      <span className="numero-tecnico absolute right-3 top-3 rounded-selo border border-marca/40 bg-fundo-elevado/85 px-2.5 py-1 text-[11px] uppercase text-marca backdrop-blur-sm">
+      <span className="numero-tecnico absolute right-3 top-3 rounded-selo border border-marca/40 bg-fundo-elevado/95 px-2.5 py-1 text-[11px] uppercase text-marca">
         {rotuloDepois}
       </span>
 
@@ -61,7 +61,7 @@ export default function ComparadorAntesDepois({
           decoding="async"
           fetchPriority={prioridade ? "high" : "auto"}
         />
-        <span className="numero-tecnico absolute left-3 top-3 rounded-selo border border-borda-forte bg-fundo-elevado/85 px-2.5 py-1 text-[11px] uppercase text-texto-primario backdrop-blur-sm">
+        <span className="numero-tecnico absolute left-3 top-3 rounded-selo border border-borda-forte bg-fundo-elevado/95 px-2.5 py-1 text-[11px] uppercase text-texto-primario">
           {rotuloAntes}
         </span>
       </div>
@@ -87,7 +87,7 @@ export default function ComparadorAntesDepois({
           type="button"
           onClick={aoExpandir}
           aria-label={t("comuns.ampliar", "Ampliar imagem")}
-          className="numero-tecnico absolute bottom-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-borda bg-fundo-elevado/85 text-texto-primario shadow-suave backdrop-blur-sm transition-colors hover:border-marca hover:text-marca"
+          className="numero-tecnico absolute bottom-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-borda bg-fundo-elevado/95 text-texto-primario shadow-suave transition-colors hover:border-marca hover:text-marca"
         >
           <HiOutlineArrowsPointingOut size={15} aria-hidden="true" />
         </button>
