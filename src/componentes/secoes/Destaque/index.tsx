@@ -49,6 +49,7 @@ export default function Destaque() {
             rotuloDepois={rotuloDepois}
             descricaoAria={t("antesDepois.descricao")}
             className="aspect-[16/10] border border-borda sm:aspect-[21/9]"
+            prioridade
           />
         </MoldeCantos>
 
@@ -70,6 +71,8 @@ export default function Destaque() {
                 src={closeUp}
                 alt={`${t("destaque.closeUpRotulo")} ${indice + 1}`}
                 className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </button>
           ))}

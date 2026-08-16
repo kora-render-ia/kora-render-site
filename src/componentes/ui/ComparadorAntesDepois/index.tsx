@@ -12,6 +12,7 @@ interface PropriedadesComparadorAntesDepois {
   className?: string;
   style?: React.CSSProperties;
   aoExpandir?: () => void;
+  prioridade?: boolean;
 }
 
 export default function ComparadorAntesDepois({
@@ -23,6 +24,7 @@ export default function ComparadorAntesDepois({
   className,
   style,
   aoExpandir,
+  prioridade = false,
 }: PropriedadesComparadorAntesDepois) {
   const { t } = useTranslation();
   const { referenciaContentor, posicao, aoPressionar, aoMover, aoSoltar, aoPressionarTecla } =
@@ -41,6 +43,9 @@ export default function ComparadorAntesDepois({
         alt={`${descricaoAria} — ${rotuloDepois}`}
         className="absolute inset-0 h-full w-full object-cover"
         draggable={false}
+        loading={prioridade ? "eager" : "lazy"}
+        decoding="async"
+        fetchPriority={prioridade ? "high" : "auto"}
       />
       <span className="numero-tecnico absolute right-3 top-3 rounded-selo border border-marca/40 bg-fundo-elevado/85 px-2.5 py-1 text-[11px] uppercase text-marca backdrop-blur-sm">
         {rotuloDepois}
@@ -52,6 +57,9 @@ export default function ComparadorAntesDepois({
           alt={`${descricaoAria} — ${rotuloAntes}`}
           className="absolute inset-0 h-full w-full object-cover"
           draggable={false}
+          loading={prioridade ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={prioridade ? "high" : "auto"}
         />
         <span className="numero-tecnico absolute left-3 top-3 rounded-selo border border-borda-forte bg-fundo-elevado/85 px-2.5 py-1 text-[11px] uppercase text-texto-primario backdrop-blur-sm">
           {rotuloAntes}

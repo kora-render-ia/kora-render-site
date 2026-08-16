@@ -31,6 +31,7 @@ export default function QuadroGaleria({ item, indice, aoClicar }: PropriedadesQu
             src={item.imagem}
             alt={`${t("galeria.titulo")} — ${rotulo}`}
             loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover grayscale-[15%] transition-all duration-500 hover:grayscale-0 sm:h-auto"
           />
         </button>
