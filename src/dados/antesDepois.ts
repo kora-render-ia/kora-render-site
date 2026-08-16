@@ -6,6 +6,8 @@ import imagemAntes2 from "../ativos/imagens/sala-casa-praia-antes.png";
 import imagemDepois2 from "../ativos/imagens/sala-casa-praia-depois.png";
 import imagemAntes3 from "../ativos/imagens/casa-concreto-antes.png";
 import imagemDepois3 from "../ativos/imagens/casa-concreto-depois.png";
+import closeUpPiscina1 from "../ativos/imagens/closeup-piscina-1.png";
+import closeUpPiscina2 from "../ativos/imagens/closeup-piscina-2.png";
 
 export const imagensAntesDepois = {
   antes: imagemAntes,
@@ -19,3 +21,6 @@ export const exemplosAntesDepois = [
   { antes: imagemAntes2, depois: imagemDepois2, proporcao: "1/1" },
   { antes: imagemAntes3, depois: imagemDepois3, proporcao: "4/3" },
 ];
+
+// Close-ups reais de detalhes da cena do destaque.
+export const closeUpsDestaque = [closeUpPiscina1, closeUpPiscina2];

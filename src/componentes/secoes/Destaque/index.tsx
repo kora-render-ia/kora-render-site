@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Contentor from "../../comuns/Contentor";
@@ -5,16 +6,18 @@ import Botao from "../../comuns/Botao";
 import MoldeCantos from "../../ui/MoldeCantos";
 import FundoTecnico from "../../ui/FundoTecnico";
 import ComparadorAntesDepois from "../../ui/ComparadorAntesDepois";
-import { imagensAntesDepois } from "../../../dados/antesDepois";
+import VisualizadorImagem from "../../ui/VisualizadorImagem";
+import { imagensAntesDepois, closeUpsDestaque } from "../../../dados/antesDepois";
 
 export default function Destaque() {
   const { t } = useTranslation();
 
   const rotuloAntes = t("antesDepois.rotuloAntes");
   const rotuloDepois = t("antesDepois.rotuloDepois");
+  const [closeUpAberto, definirCloseUpAberto] = useState<string | null>(null);
 
   return (
-    <section id="destaque" className="relative overflow-hidden pb-24 pt-36 lg:pb-32 lg:pt-44">
+    <section id="destaque" className="relative overflow-hidden pb-20 pt-36 lg:pb-28 lg:pt-44">
       <FundoTecnico comBrilho />
 
       <Contentor className="relative flex flex-col items-center text-center">
@@ -53,6 +56,29 @@ export default function Destaque() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-4 flex items-center gap-3"
+        >
+          {closeUpsDestaque.map((closeUp, indice) => (
+            <button
+              key={indice}
+              type="button"
+              onClick={() => definirCloseUpAberto(closeUp)}
+              aria-label={t("comuns.ampliar", "Ampliar imagem")}
+              className="h-16 w-16 cursor-zoom-in overflow-hidden rounded-lg border border-borda shadow-suave transition-colors hover:border-marca sm:h-20 sm:w-20"
+            >
+              <img
+                src={closeUp}
+                alt={`${t("destaque.closeUpRotulo")} ${indice + 1}`}
+                className="h-full w-full object-cover"
+              />
+            </button>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.36 }}
           className="mt-8 flex flex-wrap items-center justify-center gap-3"
         >
           <Botao href="#planos" tamanho="lg">
@@ -63,6 +89,12 @@ export default function Destaque() {
           </Botao>
         </motion.div>
       </Contentor>
+
+      <VisualizadorImagem
+        imagem={closeUpAberto}
+        alt={t("destaque.closeUpRotulo")}
+        aoFechar={() => definirCloseUpAberto(null)}
+      />
     </section>
   );
 }
