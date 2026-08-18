@@ -57,25 +57,30 @@ export default function Destaque() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-4 flex items-center gap-3"
+          className="mt-6 flex flex-col items-center gap-3"
         >
-          {closeUpsDestaque.map((closeUp, indice) => (
-            <button
-              key={indice}
-              type="button"
-              onClick={() => definirCloseUpAberto(closeUp)}
-              aria-label={t("comuns.ampliar", "Ampliar imagem")}
-              className="h-16 w-16 cursor-zoom-in overflow-hidden rounded-lg border border-borda shadow-suave transition-colors hover:border-marca sm:h-20 sm:w-20"
-            >
-              <img
-                src={closeUp}
-                alt={`${t("destaque.closeUpRotulo")} ${indice + 1}`}
-                className="h-full w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </button>
-          ))}
+          <p className="numero-tecnico text-[11px] uppercase tracking-wide text-texto-suave">
+            {t("destaque.closeUpTitulo")}
+          </p>
+          <div className="flex items-center gap-3">
+            {closeUpsDestaque.map((closeUp, indice) => (
+              <button
+                key={indice}
+                type="button"
+                onClick={() => definirCloseUpAberto(closeUp)}
+                aria-label={t("comuns.ampliar", "Ampliar imagem")}
+                className="h-16 w-16 cursor-zoom-in overflow-hidden rounded-lg border border-borda shadow-suave transition-colors hover:border-marca sm:h-20 sm:w-20"
+              >
+                <img
+                  src={closeUp}
+                  alt={`${t("destaque.closeUpRotulo")} ${indice + 1}`}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div

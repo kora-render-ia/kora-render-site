@@ -18,6 +18,7 @@
     "avaliacaoContagem": "+12,000",
     "avaliacaoRotulo": "architects and designers",
     "imagemPluginRotulo": "Plugin image",
+    "closeUpTitulo": "Zoom into the same render, no loss of detail",
     "closeUpRotulo": "Render close-up",
     "previaStatus": "Rendering",
     "previaPreset": "Preset: Interior · Golden Hour",
@@ -28,26 +29,36 @@
     "titulo": "From raw model to photorealistic render.",
     "descricao": "Drag the ruler to compare. The same SketchUp scene, transformed by Lumi in seconds.",
     "rotuloAntes": "SketchUp",
-    "rotuloDepois": "Lumi Render"
+    "rotuloDepois": "Lumi Render",
+    "custoRotulo": "Cost per render",
+    "custoValorAntes": "Less than ",
+    "custoValorDestaque": "$0.20",
+    "custoValorDepois": " per generated image",
+    "custoDescricao": "No bundles, no hidden subscription. You connect your own API key and pay only for what you render — the cost is entirely in your control."
   },
   "faixaVersoes": {
     "rotulo": "Compatible with"
   },
   "comoFunciona": {
     "marcador": "PROCESS",
-    "titulo": "Three steps. One click. Professional results.",
+    "titulo": "From SketchUp to finished render in 4 steps.",
+    "descricao": "No file exporting, no manual lighting setup, no hours of waiting. You model in SketchUp — Lumi handles the rest with one click.",
     "etapas": [
       {
-        "titulo": "Install the plugin",
-        "descricao": "Download the installer and activate Lumi inside SketchUp in under 1 minute."
+        "titulo": "Keep modeling as usual",
+        "descricao": "Set up the camera the way you always do. Lumi renders straight from SketchUp's active viewport — no exporting required."
       },
       {
-        "titulo": "Open your scene",
-        "descricao": "Use any model, at any level of detail. Lumi understands the rest."
+        "titulo": "Pick a style and lighting",
+        "descricao": "Choose the scene type, the lighting mood, and the image ratio before you render."
       },
       {
-        "titulo": "Generate stunning images",
-        "descricao": "Choose a preset, click render, and get a photorealistic result."
+        "titulo": "Render in one click",
+        "descricao": "The AI processes the scene in seconds. Render several views in sequence without repeating the process one by one."
+      },
+      {
+        "titulo": "Refine with AI if you want",
+        "descricao": "Swap elements, adjust references, and use the post-processing sliders to get exactly the result you want."
       }
     ]
   },
@@ -68,12 +79,12 @@
         "descricao": "Adjust fidelity to the model and the AI's creative level."
       },
       {
-        "titulo": "Presets",
-        "descricao": "Ready-made styles for interiors, facades, and outdoor scenes."
+        "titulo": "One annual license",
+        "descricao": "Pay once a year and use your own API key — no Lumi subscription, no middleman."
       },
       {
-        "titulo": "Masks",
-        "descricao": "Edit specific areas while keeping the rest of the composition intact."
+        "titulo": "2K and 4K quality",
+        "descricao": "Pick the right resolution for each render, from a quick 2K preview to a final 4K delivery."
       },
       {
         "titulo": "High Resolution",
@@ -122,35 +133,24 @@
   },
   "planos": {
     "marcador": "INVESTMENT",
-    "titulo": "Choose the plan that's right for you.",
-    "subtitulo": "No hidden fees. Cancel anytime. 7-day guarantee.",
-    "colunaRecursos": "What's included",
-    "planos": [
-      {
-        "nome": "Monthly",
-        "preco": "$18",
-        "periodo": "/month",
-        "descricao": "Start with no commitment.",
-        "recursos": ["Unlimited renders", "All presets", "Email support"],
-        "rotuloCta": "Choose Monthly"
-      },
-      {
-        "nome": "Annual",
-        "preco": "$149",
-        "periodo": "/year",
-        "descricao": "Save 30% by paying annually.",
-        "recursos": ["Everything in Monthly", "Early access to features", "Priority support"],
-        "rotuloCta": "Choose Annual",
-        "selo": "Recommended"
-      },
-      {
-        "nome": "Lifetime",
-        "preco": "$379",
-        "periodo": "one-time",
-        "descricao": "Pay once. Use forever.",
-        "recursos": ["All future updates", "Permanent license", "Dedicated support"],
-        "rotuloCta": "Choose Lifetime"
-      }
+    "titulo": "One annual license. No subscription.",
+    "subtitulo": "The best AI rendering plugin, at the lowest price on the market. AI for everyone.",
+    "selo": "One-time price",
+    "preco": "$39",
+    "validade": "valid for 12 months",
+    "descricao": "You pay only for the plugin and connect your own API key — no Lumi subscription, no hidden markup.",
+    "custoApiSelo": "From $0.12 per image",
+    "custoApiDescricao": "Render 70+ high-quality images with what only Lumi delivers.",
+    "rotuloCta": "Get my license",
+    "recursos": [
+      "Full access for 12 months",
+      "Use your own API key",
+      "Unlimited image renders",
+      "All presets and intensity controls",
+      "Masks to edit specific areas",
+      "2K and 4K export quality",
+      "Plugin updates included",
+      "Email support"
     ]
   },
   "depoimentos": {

@@ -1,11 +1,7 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { HiOutlinePhoto } from "react-icons/hi2";
 import Contentor from "../../comuns/Contentor";
 import CabecalhoSecao from "../../comuns/CabecalhoSecao";
-import NoEtapa from "../../ui/NoEtapa";
-import MoldeCantos from "../../ui/MoldeCantos";
 
 interface EtapaTraducao {
   titulo: string;
@@ -15,50 +11,37 @@ interface EtapaTraducao {
 export default function ComoFunciona() {
   const { t } = useTranslation();
   const etapas = t("comoFunciona.etapas", { returnObjects: true }) as EtapaTraducao[];
-  const referenciaLinha = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: referenciaLinha,
-    offset: ["start 0.8", "end 0.6"],
-  });
-  const alturaLinha = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="como-funciona" className="py-20 lg:py-28">
-      <Contentor className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+    <section id="como-funciona" className="border-y border-borda py-20 lg:py-28">
+      <Contentor>
         <CabecalhoSecao
           numero="03"
           marcador={t("comoFunciona.marcador")}
           titulo={t("comoFunciona.titulo")}
+          descricao={t("comoFunciona.descricao")}
         />
 
-        <div ref={referenciaLinha} className="relative">
-          <div className="absolute left-[21px] top-2 bottom-14 w-px bg-borda" aria-hidden="true" />
-          <motion.div
-            className="absolute left-[21px] top-2 w-px bg-marca"
-            style={{ height: alturaLinha }}
-            aria-hidden="true"
-          />
+        <div className="mt-14 grid grid-cols-1 gap-8 border-t border-borda pt-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-borda">
           {etapas.map((etapa, i) => (
-            <NoEtapa
+            <motion.div
               key={etapa.titulo}
-              numero={String(i + 1).padStart(2, "0")}
-              titulo={etapa.titulo}
-              descricao={etapa.descricao}
-              indice={i}
-            />
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-2">
-          {[0, 1, 2].map((indice) => (
-            <MoldeCantos key={indice}>
-              <div className="flex aspect-[4/3] flex-col items-center justify-center gap-2 border border-dashed border-borda-forte bg-superficie text-texto-suave">
-                <HiOutlinePhoto size={28} aria-hidden="true" />
-                <span className="numero-tecnico text-[11px] uppercase tracking-wide">
-                  {t("destaque.imagemPluginRotulo")} {String(indice + 1).padStart(2, "0")}
-                </span>
-              </div>
-            </MoldeCantos>
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="lg:px-8 lg:first:pl-0 lg:last:pr-0"
+            >
+              <span className="numero-tecnico text-[11px] text-marca">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-3 font-titulo text-base font-semibold text-texto-primario">
+                {etapa.titulo}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-texto-secundario">
+                {etapa.descricao}
+              </p>
+            </motion.div>
           ))}
         </div>
       </Contentor>

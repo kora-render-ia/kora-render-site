@@ -59,6 +59,28 @@ export default function AntesDepois() {
             );
           })}
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 flex flex-col items-center gap-4 rounded-quadro border border-borda bg-fundo-elevado px-6 py-6 text-center shadow-suave sm:flex-row sm:justify-between sm:text-left"
+        >
+          <div>
+            <p className="numero-tecnico text-[11px] uppercase tracking-wide text-texto-suave">
+              {t("antesDepois.custoRotulo")}
+            </p>
+            <p className="mt-1.5 font-titulo text-2xl font-semibold text-texto-primario sm:text-3xl">
+              {t("antesDepois.custoValorAntes")}
+              <span className="text-marca">{t("antesDepois.custoValorDestaque")}</span>
+              {t("antesDepois.custoValorDepois")}
+            </p>
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed text-texto-secundario">
+            {t("antesDepois.custoDescricao")}
+          </p>
+        </motion.div>
       </Contentor>
 
       <VisualizadorAntesDepois

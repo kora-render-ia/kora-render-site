@@ -20,11 +20,9 @@ export default function Galeria() {
           titulo={t("galeria.titulo")}
         />
 
-        <div className="columns-1 gap-3 sm:columns-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {itensGaleria.map((item, i) => (
-            <div key={item.id} className="mb-3 break-inside-avoid">
-              <QuadroGaleria item={item} indice={i} aoClicar={definirItemSelecionado} />
-            </div>
+            <QuadroGaleria key={item.id} item={item} indice={i} aoClicar={definirItemSelecionado} />
           ))}
         </div>
       </Contentor>
