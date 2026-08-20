@@ -15,7 +15,7 @@ export default function Planos() {
     <section id="planos" className="py-20 lg:py-28">
       <Contentor>
         <CabecalhoSecao
-          numero="08"
+          numero="07"
           marcador={t("planos.marcador")}
           titulo={t("planos.titulo")}
           descricao={t("planos.subtitulo")}

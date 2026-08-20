@@ -6,7 +6,6 @@ import FaixaVersoes from "../../componentes/secoes/FaixaVersoes";
 import ComoFunciona from "../../componentes/secoes/ComoFunciona";
 import Funcionalidades from "../../componentes/secoes/Funcionalidades";
 import Galeria from "../../componentes/secoes/Galeria";
-import Videos from "../../componentes/secoes/Videos";
 import Compatibilidade from "../../componentes/secoes/Compatibilidade";
 import Planos from "../../componentes/secoes/Planos";
 import Depoimentos from "../../componentes/secoes/Depoimentos";
@@ -24,7 +23,6 @@ export default function Inicio() {
         <ComoFunciona />
         <Funcionalidades />
         <Galeria />
-        <Videos />
         <Compatibilidade />
         <Planos />
         <Depoimentos />

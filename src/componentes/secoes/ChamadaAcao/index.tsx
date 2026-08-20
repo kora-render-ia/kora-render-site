@@ -42,7 +42,7 @@ export default function ChamadaAcao() {
           <Botao href="#planos" tamanho="lg">
             {t("chamadaAcao.rotuloPrimario")}
           </Botao>
-          <Botao href="#videos" variante="secundario" tamanho="lg">
+          <Botao href="#antes-depois" variante="secundario" tamanho="lg">
             {t("chamadaAcao.rotuloSecundario")}
           </Botao>
         </motion.div>

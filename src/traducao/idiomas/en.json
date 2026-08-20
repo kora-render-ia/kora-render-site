@@ -87,10 +87,6 @@
         "descricao": "Pick the right resolution for each render, from a quick 2K preview to a final 4K delivery."
       },
       {
-        "titulo": "High Resolution",
-        "descricao": "Export renders in presentation-ready quality for clients."
-      },
-      {
         "titulo": "Simple Interface",
         "descricao": "Everything inside SketchUp, with no learning curve."
       },
@@ -113,17 +109,6 @@
       "fachadas": "Facades",
       "areas-externas": "Outdoor areas"
     }
-  },
-  "videos": {
-    "marcador": "WALKTHROUGHS",
-    "titulo": "See Lumi in action.",
-    "minutos": "min",
-    "itens": [
-      { "titulo": "Installation" },
-      { "titulo": "First Render" },
-      { "titulo": "Features" },
-      { "titulo": "Updates" }
-    ]
   },
   "compatibilidade": {
     "marcador": "REQUIREMENTS",

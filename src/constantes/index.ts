@@ -7,7 +7,6 @@ export const IDS_SECAO = {
   comoFunciona: "como-funciona",
   funcionalidades: "recursos",
   galeria: "galeria",
-  videos: "videos",
   compatibilidade: "compatibilidade",
   planos: "planos",
   depoimentos: "depoimentos",

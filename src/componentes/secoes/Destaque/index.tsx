@@ -25,7 +25,7 @@ export default function Destaque() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.08 }}
-          className="equilibrio-texto mx-auto max-w-4xl font-titulo text-[2.6rem] font-semibold leading-[1.05] tracking-tight text-texto-primario sm:text-6xl lg:text-[4.75rem]"
+          className="equilibrio-texto mx-auto max-w-5xl font-titulo text-[3.1rem] font-bold leading-[1.02] tracking-tight text-texto-primario sm:text-7xl lg:text-[5.75rem]"
         >
           <span>{t("destaque.tituloAntes")}</span>
           <span className="text-marca">{t("destaque.tituloDestaque")}</span>
@@ -92,7 +92,7 @@ export default function Destaque() {
           <Botao href="#planos" tamanho="lg">
             {t("destaque.ctaPrimario")}
           </Botao>
-          <Botao href="#videos" variante="secundario" tamanho="lg">
+          <Botao href="#antes-depois" variante="secundario" tamanho="lg">
             {t("destaque.ctaSecundario")}
           </Botao>
         </motion.div>

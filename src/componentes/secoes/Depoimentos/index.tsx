@@ -18,7 +18,7 @@ export default function Depoimentos() {
     <section className="py-20 lg:py-28">
       <Contentor>
         <CabecalhoSecao
-          numero="09"
+          numero="08"
           marcador={t("depoimentos.marcador")}
           titulo={t("depoimentos.titulo")}
         />

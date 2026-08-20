@@ -20,7 +20,7 @@ export default function PerguntasFrequentes() {
       <Contentor className="grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <CabecalhoSecao
-            numero="10"
+            numero="09"
             marcador={t("perguntasFrequentes.marcador")}
             titulo={t("perguntasFrequentes.titulo")}
           />

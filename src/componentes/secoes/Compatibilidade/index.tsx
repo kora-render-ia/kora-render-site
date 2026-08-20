@@ -15,7 +15,7 @@ export default function Compatibilidade() {
     <section className="py-20 lg:py-28">
       <Contentor>
         <CabecalhoSecao
-          numero="07"
+          numero="06"
           marcador={t("compatibilidade.marcador")}
           titulo={t("compatibilidade.titulo")}
         />

@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { HiArrowsRightLeft, HiOutlineArrowsPointingOut } from "react-icons/hi2";
+import { HiOutlineArrowsPointingOut } from "react-icons/hi2";
 import { useControleDeslizante } from "../../../ganchos/useControleDeslizante";
 import { mesclarClasses } from "../../../utilitarios/mesclarClasses";
+import logoLumi from "../../../ativos/logo/lumi-icone.png";
 
 interface PropriedadesComparadorAntesDepois {
   imagemAntes: string;
@@ -76,9 +77,9 @@ export default function ComparadorAntesDepois({
           aria-valuenow={Math.round(posicao)}
           aria-valuemin={0}
           aria-valuemax={100}
-          className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full border border-marca bg-fundo-elevado text-marca shadow-suave"
+          className="absolute left-1/2 top-1/2 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full border border-marca bg-fundo-elevado p-1.5 shadow-suave"
         >
-          <HiArrowsRightLeft size={14} aria-hidden="true" />
+          <img src={logoLumi} alt="" className="h-full w-full object-contain" draggable={false} />
         </button>
       </div>
 

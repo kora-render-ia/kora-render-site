@@ -4,7 +4,6 @@ export const iconesFuncionalidades: string[] = [
   "sliders",
   "key",
   "tv",
-  "expand",
   "zap",
   "refresh",
 ];

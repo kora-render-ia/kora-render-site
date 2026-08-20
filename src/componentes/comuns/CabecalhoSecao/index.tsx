@@ -32,7 +32,7 @@ export default function CabecalhoSecao({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55, delay: 0.05 }}
-        className="equilibrio-texto mt-4 max-w-2xl font-titulo text-3xl font-semibold leading-[1.15] tracking-tight text-texto-primario sm:text-4xl"
+        className="equilibrio-texto mt-4 max-w-2xl font-titulo text-4xl font-bold leading-[1.1] tracking-tight text-texto-primario sm:text-5xl"
       >
         {titulo}
       </motion.h2>
