@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { HiBars3, HiXMark } from "react-icons/hi2";
@@ -49,6 +50,12 @@ export default function BarraNavegacao() {
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
+          <Link
+            to="/conta"
+            className="text-[13px] text-texto-secundario transition-colors hover:text-texto-primario"
+          >
+            {t("navegacao.minhaConta")}
+          </Link>
           <SeletorIdioma />
           <Botao href="#planos" tamanho="sm">
             {t("navegacao.cta")}
@@ -93,6 +100,18 @@ export default function BarraNavegacao() {
                   </a>
                 </li>
               ))}
+              <li className="numero-tecnico flex items-center gap-2 py-2">
+                <span className="text-[10px] text-texto-suave">
+                  {String(itensNavegacao.length + 1).padStart(2, "0")}
+                </span>
+                <Link
+                  to="/conta"
+                  onClick={() => setMenuAberto(false)}
+                  className="text-sm text-texto-secundario hover:text-texto-primario"
+                >
+                  {t("navegacao.minhaConta")}
+                </Link>
+              </li>
               <li className="pt-2">
                 <Botao href="#planos" tamanho="sm" className="w-full">
                   {t("navegacao.cta")}

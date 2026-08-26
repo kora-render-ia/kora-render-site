@@ -5,7 +5,8 @@
     "galeria": "Gallery",
     "planos": "Pricing",
     "faq": "FAQ",
-    "cta": "Buy Now"
+    "cta": "Buy Now",
+    "minhaConta": "My account"
   },
   "destaque": {
     "marcador": "OFFICIAL SKETCHUP PLUGIN · V2.0",
@@ -211,5 +212,41 @@
     "rotulo": "Language",
     "pt-BR": "Português (Brasil)",
     "en": "English"
+  },
+  "conta": {
+    "voltar": "Back to site",
+    "login": {
+      "titulo": "Access your account",
+      "descricao": "Sign in with the email and license key you received when you purchased.",
+      "rotuloEmail": "Email",
+      "rotuloChave": "License key",
+      "marcadorChave": "KR-XXXX-XXXX-XXXX",
+      "botaoEntrar": "Sign in",
+      "botaoEntrando": "Signing in...",
+      "esqueciChave": "I forgot my license key",
+      "esqueciTitulo": "Recover license key",
+      "esqueciDescricao": "Enter the email used at purchase — if there's a license registered, we'll send you the key by email.",
+      "esqueciBotao": "Send",
+      "esqueciEnviando": "Sending...",
+      "esqueciSucesso": "If that email has a registered license, we've sent the key by email.",
+      "esqueciVoltar": "Back to sign in"
+    },
+    "painel": {
+      "saudacao": "Hi, {{nome}}",
+      "plano": "Plan",
+      "validadeRotulo": "Valid until",
+      "versaoAtual": "Latest version: {{versao}}",
+      "baixarPlugin": "Download plugin",
+      "downloadIndisponivel": "Download unavailable — resolve your license status to keep downloading new versions.",
+      "sair": "Sign out",
+      "carregando": "Loading..."
+    },
+    "status": {
+      "ACTIVE": "Active",
+      "BLOCKED": "Blocked",
+      "EXPIRED": "Expired",
+      "REFUNDED": "Refunded",
+      "CANCELED": "Canceled"
+    }
   }
 }

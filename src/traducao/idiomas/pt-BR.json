@@ -5,7 +5,8 @@
     "galeria": "Galeria",
     "planos": "Planos",
     "faq": "FAQ",
-    "cta": "Comprar"
+    "cta": "Comprar",
+    "minhaConta": "Minha conta"
   },
   "destaque": {
     "marcador": "PLUGIN OFICIAL SKETCHUP",
@@ -211,5 +212,41 @@
     "rotulo": "Idioma",
     "pt-BR": "Português (Brasil)",
     "en": "English"
+  },
+  "conta": {
+    "voltar": "Voltar ao site",
+    "login": {
+      "titulo": "Acesse sua conta",
+      "descricao": "Entre com o e-mail e a chave de licença que você recebeu por e-mail na compra.",
+      "rotuloEmail": "E-mail",
+      "rotuloChave": "Chave de licença",
+      "marcadorChave": "KR-XXXX-XXXX-XXXX",
+      "botaoEntrar": "Entrar",
+      "botaoEntrando": "Entrando...",
+      "esqueciChave": "Esqueci minha chave de licença",
+      "esqueciTitulo": "Recuperar chave de licença",
+      "esqueciDescricao": "Informe o e-mail usado na compra — se houver uma licença cadastrada, enviaremos a chave por e-mail.",
+      "esqueciBotao": "Enviar",
+      "esqueciEnviando": "Enviando...",
+      "esqueciSucesso": "Se esse e-mail tiver uma licença cadastrada, enviamos a chave por e-mail.",
+      "esqueciVoltar": "Voltar ao login"
+    },
+    "painel": {
+      "saudacao": "Olá, {{nome}}",
+      "plano": "Plano",
+      "validadeRotulo": "Válido até",
+      "versaoAtual": "Versão mais recente: {{versao}}",
+      "baixarPlugin": "Baixar plugin",
+      "downloadIndisponivel": "Download indisponível — regularize sua licença para continuar baixando novas versões.",
+      "sair": "Sair",
+      "carregando": "Carregando..."
+    },
+    "status": {
+      "ACTIVE": "Ativa",
+      "BLOCKED": "Bloqueada",
+      "EXPIRED": "Expirada",
+      "REFUNDED": "Reembolsada",
+      "CANCELED": "Cancelada"
+    }
   }
 }

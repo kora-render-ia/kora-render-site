@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing/sales landing page for the "Lumi Render" SketchUp plugin. React 19 + TypeScript + Vite + Tailwind CSS v4 + Framer Motion, with i18n (pt-BR/en via `i18next`/`react-i18next`). Single-page, long-scroll site — no routing beyond `/`. Has **no backend of its own** and does not call the Kora Render licensing API (`kora-render-api`, sibling repo) at all; it only links out to Hotmart checkout URLs, which is where it connects (indirectly) to the rest of the ecosystem.
+Marketing/sales landing page for the "Lumi Render" SketchUp plugin. React 19 + TypeScript + Vite + Tailwind CSS v4 + Framer Motion + `react-router-dom`, with i18n (pt-BR/en via `i18next`/`react-i18next`). Mostly a single-page, long-scroll marketing site (`/`), plus one authenticated route (`/conta`) that calls the Kora Render licensing API (`kora-render-api`, sibling repo). The marketing page itself still has no backend of its own — it only links out to Hotmart checkout URLs for purchases.
 
 ## Commands
 
@@ -20,7 +20,8 @@ No test suite exists in this repo.
 
 ## Architecture
 
-- `src/paginas/Inicio/index.tsx` — the entire site: `BarraNavegacao` (nav) + `Rodape` (footer) wrapping 11 sections rendered in a fixed order from `src/componentes/secoes/*` (Destaque, AntesDepois, FaixaVersoes, ComoFunciona, Funcionalidades, Galeria, Compatibilidade, Planos, Depoimentos, PerguntasFrequentes, ChamadaAcao).
+- `src/App.tsx` — `BrowserRouter` with two routes: `/` (`paginas/Inicio`, the marketing page) and `/conta` (`paginas/Conta`, the client account area — see below).
+- `src/paginas/Inicio/index.tsx` — the marketing site: `BarraNavegacao` (nav) + `Rodape` (footer) wrapping 11 sections rendered in a fixed order from `src/componentes/secoes/*` (Destaque, AntesDepois, FaixaVersoes, ComoFunciona, Funcionalidades, Galeria, Compatibilidade, Planos, Depoimentos, PerguntasFrequentes, ChamadaAcao).
 - Content is split across two layers: **structured data** in `src/dados/*.ts` (arrays/objects a section maps over — images, feature lists, checkout links) and **copy/strings** in `src/traducao/idiomas/{pt-BR,en}.json` (read via `useTranslation()`/`t(...)`). When changing visible text, edit the JSON files (both languages); when changing what's listed/looped over, edit the matching file in `src/dados/`.
 - `src/constantes/index.ts` — site-wide constants: `NOME_SITE`, `EMAIL_CONTATO`, and `IDS_SECAO` (anchor ids used for in-page nav links, must match each section's `id` prop).
 - `src/ganchos/` — small reusable hooks (`useContagem` — animated counter, `useControleDeslizante` — before/after slider, `useRolagem` — scroll-based effects).
@@ -35,6 +36,16 @@ The **Planos** section (`src/componentes/secoes/Planos/index.tsx`) advertises a 
 ### Contact form
 
 `src/servicos/servicoContato.ts` (`enviarFormularioContato`) is an explicit placeholder — it never calls a real API, just simulates a delay and logs to console. Replace its body with a real request when a backend endpoint for this exists (it does not today, in the licensing API or elsewhere).
+
+### Client account area (`/conta`)
+
+`src/paginas/Conta/index.tsx` — lets a customer log in with email + license key (the same credential the plugin uses) to see their name, license status/validity, and download the latest plugin build. Backed by `src/servicos/servicoPortal.ts`, which calls `POST /api/portal/login` and `GET /api/portal/me` on the API (`VITE_API_URL`, falls back to the production API if unset — never to `localhost`, so a build with a missing env var doesn't silently point at a dev machine). The JWT is stored in `localStorage` (`kr_portal_token`); "logout" just clears it client-side, there's no server session to revoke.
+
+This is a **separate auth scheme from the plugin's own login** (`/api/auth/login`) — see `kora-render-api`'s `CLAUDE.md` for why (reusing the plugin's endpoint would burn one of the license's device slots on every website visit). A blocked/expired license can still log in here and see its real status (with the download button disabled) rather than being refused outright.
+
+## Environment
+
+`.env`/`.env.*` are gitignored. The only variable this project reads is `VITE_API_URL` (used by `servicoPortal.ts`) — see the fallback behavior above if it's unset.
 
 ## Known rough edges
 
