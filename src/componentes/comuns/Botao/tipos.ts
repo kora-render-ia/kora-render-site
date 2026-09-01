@@ -7,6 +7,8 @@ export interface PropriedadesBotao {
   variante?: VarianteBotao;
   tamanho?: TamanhoBotao;
   href?: string;
+  target?: string;
+  rel?: string;
   icone?: ReactNode;
   posicaoIcone?: "esquerda" | "direita";
   children: ReactNode;

@@ -9,6 +9,7 @@ import FundoTecnico from "../../componentes/ui/FundoTecnico";
 import { NOME_SITE } from "../../constantes";
 import logoLumi from "../../ativos/logo/lumi-completa.png";
 import { servicoPortal, obterTokenSalvo, limparTokenSalvo } from "../../servicos/servicoPortal";
+import { useMetadadosPagina } from "../../ganchos/useMetadadosPagina";
 import type { RespostaPortal, StatusLicencaPortal } from "../../tipos";
 
 const CORES_STATUS: Record<StatusLicencaPortal, string> = {
@@ -31,7 +32,13 @@ function CabecalhoConta() {
   return (
     <Contentor className="flex h-20 items-center justify-between">
       <Link to="/" className="flex items-center">
-        <img src={logoLumi} alt={NOME_SITE} className="h-8 w-auto object-contain" />
+        <img
+          src={logoLumi}
+          alt={NOME_SITE}
+          width={500}
+          height={150}
+          className="h-8 w-auto object-contain"
+        />
       </Link>
     </Contentor>
   );
@@ -265,6 +272,14 @@ function PainelConta({ sessao, aoSair }: { sessao: RespostaPortal; aoSair: () =>
 
 export default function Conta() {
   const { t } = useTranslation();
+
+  useMetadadosPagina({
+    titulo: t("conta.tituloPagina"),
+    descricao: t("conta.descricaoPagina"),
+    caminho: "/conta",
+    semIndexacao: true,
+  });
+
   const [sessao, definirSessao] = useState<RespostaPortal | null>(null);
   const [verificando, definirVerificando] = useState(true);
 

@@ -1,4 +1,9 @@
 {
+  "comuns": {
+    "pularParaConteudo": "Pular para o conteúdo",
+    "ampliar": "Ampliar imagem",
+    "fechar": "Fechar"
+  },
   "navegacao": {
     "comoFunciona": "Como funciona",
     "funcionalidades": "Recursos",
@@ -123,10 +128,11 @@
     "subtitulo": "O melhor plugin de renderização por IA, pelo menor preço do mercado. IA para todos.",
     "selo": "Preço único",
     "preco": "R$ 197",
+    "precoSchema": "197",
+    "moedaSchema": "BRL",
     "validade": "válido por 12 meses",
     "descricao": "Você paga só pelo plugin e conecta sua própria chave de API — sem mensalidade do Lumi, sem markup escondido.",
     "custoApiSelo": "A partir de R$ 0,60 por imagem",
-    "custoApiDescricao": "Renderize mais de 70 imagens em alta qualidade com o que só o Lumi entrega.",
     "rotuloCta": "Garantir minha licença",
     "recursos": [
       "Acesso completo por 12 meses",
@@ -214,6 +220,8 @@
     "en": "English"
   },
   "conta": {
+    "tituloPagina": "Minha conta — Lumi",
+    "descricaoPagina": "Acesse sua conta Lumi para consultar o status da sua licença e baixar a versão mais recente do plugin.",
     "voltar": "Voltar ao site",
     "login": {
       "titulo": "Acesse sua conta",

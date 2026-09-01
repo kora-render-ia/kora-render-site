@@ -1,4 +1,9 @@
 {
+  "comuns": {
+    "pularParaConteudo": "Skip to content",
+    "ampliar": "Enlarge image",
+    "fechar": "Close"
+  },
   "navegacao": {
     "comoFunciona": "How it works",
     "funcionalidades": "Features",
@@ -123,10 +128,11 @@
     "subtitulo": "The best AI rendering plugin, at the lowest price on the market. AI for everyone.",
     "selo": "One-time price",
     "preco": "$39",
+    "precoSchema": "39",
+    "moedaSchema": "USD",
     "validade": "valid for 12 months",
     "descricao": "You pay only for the plugin and connect your own API key — no Lumi subscription, no hidden markup.",
     "custoApiSelo": "From $0.12 per image",
-    "custoApiDescricao": "Render 70+ high-quality images with what only Lumi delivers.",
     "rotuloCta": "Get my license",
     "recursos": [
       "Full access for 12 months",
@@ -214,6 +220,8 @@
     "en": "English"
   },
   "conta": {
+    "tituloPagina": "My account — Lumi",
+    "descricaoPagina": "Sign in to your Lumi account to check your license status and download the latest plugin version.",
     "voltar": "Back to site",
     "login": {
       "titulo": "Access your account",

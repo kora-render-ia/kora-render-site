@@ -32,7 +32,13 @@ export default function BarraNavegacao() {
     >
       <nav className="mx-auto flex h-16 w-full max-w-[90rem] items-center justify-between px-6 lg:px-12">
         <a href="#destaque" className="flex items-center text-texto-primario">
-          <img src={logoLumi} alt={NOME_SITE} className="h-8 w-auto object-contain" />
+          <img
+            src={logoLumi}
+            alt={NOME_SITE}
+            width={500}
+            height={150}
+            className="h-8 w-auto object-contain"
+          />
         </a>
 
         <ul className="hidden items-center gap-9 md:flex">

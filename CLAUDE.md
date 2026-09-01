@@ -33,6 +33,13 @@ The **Planos** section (`src/componentes/secoes/Planos/index.tsx`) advertises a 
 
 `checkoutPlanos[1]` in `src/dados/planos.ts` is unused dead data (leftover from an earlier two-tier pricing design) — safe to remove if touching that file, or repurpose if a second visible plan is ever added back.
 
+### Naming convention — Portuguese throughout
+
+Every folder, file, component, hook, type, constant, and service in `src/` is named in Portuguese (`componentes`, `paginas`, `ganchos`, `servicos`, `dados`, `Botao`, `Rodape`, `useRolagem`, etc.). Match this when adding new code. Two deliberate exceptions, since they're contracts of React/JSX itself rather than naming choices:
+
+1. **`children`** — renaming it would break JSX's `<Componente>filho</Componente>` syntax.
+2. **The `use` hook prefix** (`useRolagem`, `useContagem`, `useControleDeslizante`) — required by `react-hooks/rules-of-hooks` and React itself; only the noun after `use` is Portuguese.
+
 ### Contact form
 
 `src/servicos/servicoContato.ts` (`enviarFormularioContato`) is an explicit placeholder — it never calls a real API, just simulates a delay and logs to console. Replace its body with a real request when a backend endpoint for this exists (it does not today, in the licensing API or elsewhere).

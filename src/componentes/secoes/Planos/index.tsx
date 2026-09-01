@@ -6,6 +6,7 @@ import CabecalhoSecao from "../../comuns/CabecalhoSecao";
 import Selo from "../../comuns/Selo";
 import Botao from "../../comuns/Botao";
 import MoldeCantos from "../../ui/MoldeCantos";
+import { checkoutPlanos } from "../../../dados/planos";
 
 export default function Planos() {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ export default function Planos() {
               <Selo variante="marca">{t("planos.selo")}</Selo>
 
               <div className="mt-4 flex flex-wrap items-baseline gap-2">
-                <span className="font-titulo text-5xl font-semibold text-texto-primario">
+                <span className="font-titulo text-6xl font-bold text-texto-primario sm:text-7xl">
                   {t("planos.preco")}
                 </span>
                 <span className="text-sm text-texto-suave">{t("planos.validade")}</span>
@@ -43,20 +44,28 @@ export default function Planos() {
                 {t("planos.descricao")}
               </p>
 
-              <div className="mt-4 flex flex-wrap items-center gap-2.5">
-                <span className="numero-tecnico inline-flex items-center rounded-selo border border-borda bg-superficie px-3 py-1.5 text-[11px] uppercase tracking-wide text-texto-secundario">
+              <div className="mt-4 flex flex-col items-start gap-3">
+                <span className="numero-tecnico inline-flex w-fit items-center rounded-selo border border-borda bg-superficie px-3 py-1.5 text-[11px] uppercase tracking-wide text-texto-secundario">
                   {t("planos.custoApiSelo")}
                 </span>
-                <span className="text-sm text-texto-suave">{t("planos.custoApiDescricao")}</span>
-              </div>
 
-              <Botao href="#" tamanho="lg" className="mt-6 w-full sm:w-auto">
-                {t("planos.rotuloCta")}
-              </Botao>
+                <Botao
+                  href={checkoutPlanos[0]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tamanho="lg"
+                  className="w-full sm:w-auto"
+                >
+                  {t("planos.rotuloCta")}
+                </Botao>
+              </div>
 
               <ul className="mt-8 grid grid-cols-1 gap-3 border-t border-borda pt-6 sm:grid-cols-2">
                 {recursos.map((recurso) => (
-                  <li key={recurso} className="flex items-start gap-2.5 text-sm text-texto-secundario">
+                  <li
+                    key={recurso}
+                    className="flex items-start gap-2.5 text-sm text-texto-secundario"
+                  >
                     <HiCheck className="mt-0.5 shrink-0 text-marca" size={15} aria-hidden="true" />
                     <span>{recurso}</span>
                   </li>

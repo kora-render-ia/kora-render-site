@@ -21,32 +21,35 @@ export default function ItemPergunta({
 
   return (
     <div className="border-b border-borda">
-      <button
-        type="button"
-        onClick={aoAlternar}
-        aria-expanded={aberto}
-        aria-controls={idPainel}
-        className="flex w-full items-center gap-4 py-4 text-left"
-      >
-        <span
-          className={mesclarClasses(
-            "numero-tecnico text-[11px]",
-            aberto ? "text-marca" : "text-texto-suave"
-          )}
+      <h3 className="contents">
+        <button
+          type="button"
+          onClick={aoAlternar}
+          aria-expanded={aberto}
+          aria-controls={idPainel}
+          className="flex w-full items-center gap-4 py-4 text-left"
         >
-          Q{String(indice + 1).padStart(2, "0")}
-        </span>
-        <span className="flex-1 text-sm font-medium text-texto-primario">{pergunta}</span>
-        <span
-          className={mesclarClasses(
-            "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border",
-            aberto ? "border-marca text-marca" : "border-borda-forte text-texto-suave"
-          )}
-          aria-hidden="true"
-        >
-          {aberto ? <HiMinus size={11} /> : <HiPlus size={11} />}
-        </span>
-      </button>
+          <span
+            className={mesclarClasses(
+              "numero-tecnico text-[11px]",
+              aberto ? "text-marca" : "text-texto-suave"
+            )}
+            aria-hidden="true"
+          >
+            Q{String(indice + 1).padStart(2, "0")}
+          </span>
+          <span className="flex-1 text-sm font-medium text-texto-primario">{pergunta}</span>
+          <span
+            className={mesclarClasses(
+              "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border",
+              aberto ? "border-marca text-marca" : "border-borda-forte text-texto-suave"
+            )}
+            aria-hidden="true"
+          >
+            {aberto ? <HiMinus size={11} /> : <HiPlus size={11} />}
+          </span>
+        </button>
+      </h3>
       <AnimatePresence initial={false}>
         {aberto && (
           <motion.div

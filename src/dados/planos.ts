@@ -7,3 +7,9 @@ export const metaDepoimentos = [
   { avatar: avatarMariana, nota: 5 },
   { avatar: avatarRafael, nota: 5 },
 ];
+
+// Links diretos de checkout da Hotmart (abrem a página de pagamento em uma nova aba).
+export const checkoutPlanos = [
+  "https://pay.hotmart.com/S106607417E?off=zzsgvdoq",
+  "https://pay.hotmart.com/S106607417E?off=4vfri6gq",
+];

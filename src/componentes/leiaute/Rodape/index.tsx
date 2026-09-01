@@ -37,7 +37,13 @@ export default function Rodape() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <a href="#destaque" className="flex items-center text-texto-primario">
-              <img src={logoLumi} alt={NOME_SITE} className="h-8 w-auto object-contain" />
+              <img
+                src={logoLumi}
+                alt={NOME_SITE}
+                width={500}
+                height={150}
+                className="h-8 w-auto object-contain"
+              />
             </a>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-texto-secundario">
               {t("rodape.descricao")}
