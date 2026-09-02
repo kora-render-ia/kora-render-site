@@ -39,7 +39,7 @@ export default function ChamadaAcao() {
           transition={{ duration: 0.5, delay: 0.18 }}
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
-          <Botao href="#planos" tamanho="lg">
+          <Botao href="#planos" variante="invertido" tamanho="lg">
             {t("chamadaAcao.rotuloPrimario")}
           </Botao>
           <Botao href="#antes-depois" variante="secundario" tamanho="lg">

@@ -46,19 +46,19 @@ A nova direção usa a metáfora de uma **mesa de desenho arquitetônico** — c
 
 ## O que mudou por seção
 
-| Seção | Antes | Depois |
-|---|---|---|
+| Seção           | Antes                                           | Depois                                                                                                                |
+| --------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Destaque (Hero) | Centralizado, badge+título+CTA+imagem à direita | Editorial assimétrico: título full-width, avaliação na margem vertical, imagem com moldura de canto e legenda técnica |
-| Antes/Depois | — | Subiu para a 2ª posição (prova visual mais cedo); comparador com moldura e rótulos técnicos |
-| Como Funciona | 3 cards lado a lado | Timeline vertical conectada, linha animada por scroll |
-| Funcionalidades | Grid uniforme 4 colunas | Grid bento assimétrico com um item em destaque |
-| Galeria | Grid estático + filtros em pílula no topo | Filme horizontal com scroll + abas de categoria na lateral |
-| Vídeos | Botão play circular + duração em pílula | Cartão com play quadrado + código de tempo estilo timecode |
-| Compatibilidade | Grid de ícones | Tabela/lista de especificação técnica |
-| Planos | 3 caixas arredondadas com glow | Dossiê comparativo; plano recomendado com moldura de canto |
-| Depoimentos | 3 cards em grid | Citações empilhadas com numeração e avaliação lateral |
-| FAQ | Accordion com chevron circular | Lista numerada ("Q01") com toggle quadrado +/− |
-| CTA | Caixa arredondada com glow | Faixa full-bleed com marcas de mira |
+| Antes/Depois    | —                                               | Subiu para a 2ª posição (prova visual mais cedo); comparador com moldura e rótulos técnicos                           |
+| Como Funciona   | 3 cards lado a lado                             | Timeline vertical conectada, linha animada por scroll                                                                 |
+| Funcionalidades | Grid uniforme 4 colunas                         | Grid bento assimétrico com um item em destaque                                                                        |
+| Galeria         | Grid estático + filtros em pílula no topo       | Filme horizontal com scroll + abas de categoria na lateral                                                            |
+| Vídeos          | Botão play circular + duração em pílula         | Cartão com play quadrado + código de tempo estilo timecode                                                            |
+| Compatibilidade | Grid de ícones                                  | Tabela/lista de especificação técnica                                                                                 |
+| Planos          | 3 caixas arredondadas com glow                  | Dossiê comparativo; plano recomendado com moldura de canto                                                            |
+| Depoimentos     | 3 cards em grid                                 | Citações empilhadas com numeração e avaliação lateral                                                                 |
+| FAQ             | Accordion com chevron circular                  | Lista numerada ("Q01") com toggle quadrado +/−                                                                        |
+| CTA             | Caixa arredondada com glow                      | Faixa full-bleed com marcas de mira                                                                                   |
 
 ## Arquitetura (100% em português)
 

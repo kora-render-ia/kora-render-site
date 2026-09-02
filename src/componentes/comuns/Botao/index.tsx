@@ -4,10 +4,11 @@ import { mesclarClasses } from "../../../utilitarios/mesclarClasses";
 import type { PropriedadesBotao } from "./tipos";
 
 const estilosVariante: Record<NonNullable<PropriedadesBotao["variante"]>, string> = {
-  primario: "bg-marca text-white shadow-suave hover:bg-marca-escura",
+  primario: "bg-marca text-texto-sobre-marca shadow-suave hover:bg-marca-hover",
   secundario:
-    "bg-transparent text-texto-primario border border-borda-forte hover:border-marca hover:text-marca",
+    "bg-transparent text-texto-primario border border-borda hover:border-acento-soft hover:text-marca",
   fantasma: "bg-transparent text-texto-secundario hover:text-texto-primario",
+  invertido: "bg-invertido-fundo text-invertido-texto shadow-suave hover:bg-invertido-fundo-hover",
 };
 
 const estilosTamanho: Record<NonNullable<PropriedadesBotao["tamanho"]>, string> = {
@@ -30,7 +31,7 @@ export default function Botao({
   ...resto
 }: PropriedadesBotao) {
   const classes = mesclarClasses(
-    "group relative inline-flex items-center justify-center whitespace-nowrap rounded-xl font-medium tracking-wide transition-colors duration-200",
+    "group relative inline-flex items-center justify-center whitespace-nowrap rounded-botao font-medium tracking-wide transition-colors duration-200",
     desabilitado && "pointer-events-none opacity-40",
     estilosVariante[variante],
     estilosTamanho[tamanho],

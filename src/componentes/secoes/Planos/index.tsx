@@ -34,7 +34,7 @@ export default function Planos() {
               <Selo variante="marca">{t("planos.selo")}</Selo>
 
               <div className="mt-4 flex flex-wrap items-baseline gap-2">
-                <span className="font-titulo text-6xl font-bold text-texto-primario sm:text-7xl">
+                <span className="numero-tecnico text-6xl font-bold text-texto-primario sm:text-7xl">
                   {t("planos.preco")}
                 </span>
                 <span className="text-sm text-texto-suave">{t("planos.validade")}</span>

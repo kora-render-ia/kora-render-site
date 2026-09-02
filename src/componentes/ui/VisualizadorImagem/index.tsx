@@ -9,7 +9,11 @@ interface PropriedadesVisualizadorImagem {
   aoFechar: () => void;
 }
 
-export default function VisualizadorImagem({ imagem, alt, aoFechar }: PropriedadesVisualizadorImagem) {
+export default function VisualizadorImagem({
+  imagem,
+  alt,
+  aoFechar,
+}: PropriedadesVisualizadorImagem) {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -56,7 +60,7 @@ export default function VisualizadorImagem({ imagem, alt, aoFechar }: Propriedad
             transition={{ duration: 0.25 }}
             src={imagem}
             alt={alt}
-            className="max-h-full max-w-full rounded-quadro object-contain shadow-quadro"
+            className="max-h-full max-w-full rounded-modal object-contain shadow-quadro"
             onClick={(evento) => evento.stopPropagation()}
           />
         </motion.div>

@@ -17,7 +17,7 @@
       content="Transforme seus modelos do SketchUp em imagens fotorrealistas em segundos com o Lumi, o plugin de renderização por inteligência artificial para arquitetos e designers."
     />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#f7f8f9" />
+    <meta name="theme-color" content="#191c1f" />
 
     <link rel="canonical" href="https://www.lumirender.com.br/" />
 
@@ -43,14 +43,33 @@
     />
     <meta name="twitter:image" content="https://www.lumirender.com.br/og-image.jpg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <!--
+      Sem web fonts: a pilha de fontes do sistema (ver DESIGN.md) é a mesma
+      decisão de marca herdada do plugin, que precisa carregar instantâneo
+      sem depender de internet.
+    -->
   </head>
   <body>
+    <!--
+      THESIS: a landing deixa de ser um site de SaaS genérico e passa a se
+      parecer com uma extensão real do software (V-Ray/Enscape/DaVinci
+      Resolve), recusando o clichê claro-editorial-arredondado da versão anterior.
+      OWN-WORLD: fundo quase-preto #191c1f, um único accent azul-elétrico
+      #3d9bd6 (clareia no hover), geometria contida 6/10/14px, sombras pretas
+      profundas com inner highlight branco, números sempre monoespaçados.
+      STORY: visitante entende que está diante de uma ferramenta técnica de
+      verdade, não de um app "fofo" — e reconhece a mesma identidade ao abrir
+      o plugin depois de comprar.
+      FIRST VIEWPORT: hero mantém a composição herdada (título full-width,
+      comparador antes/depois com moldura) só trocando a pele visual para o
+      tema escuro do produto real; CTAs seguem abaixo da dobra em telas
+      estreitas — comportamento herdado, não modificado nesta passada.
+      FORM: identidade pinada pelo usuário a partir de ui/css/01-base-tema.css
+      do plugin — sem exploração via concept-seed (brief-pinned world).
+      FINISH: unreviewed and undocumented is unfinished; this build ends with
+      the finish review, the verdict, DESIGN.md, and every shipping raster
+      carrying its provenance.
+    -->
     <noscript>
       <div style="padding: 2rem; text-align: center; font-family: sans-serif">
         Este site precisa de JavaScript habilitado para funcionar. Ative o JavaScript no seu

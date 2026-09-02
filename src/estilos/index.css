@@ -1,38 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  /* ===== Cores base — identidade "azul-acinzentado premium" ===== */
-  --color-fundo: #f7f8f9;
-  --color-fundo-elevado: #ffffff;
-  --color-superficie: #eff1f3;
-  --color-superficie-hover: #e6e9ec;
-  --color-borda: #dcdfe2;
-  --color-borda-forte: #c5c9ce;
+  /* ===== Identidade real do plugin Lumi Render — tema escuro técnico ===== */
+  /* Fonte: ui/css/01-base-tema.css (kora-render-plugin). Ver DESIGN.md. */
 
-  /* Marca (azul-petróleo) */
-  --color-marca: #3e6680;
-  --color-marca-escura: #2c4b5e;
-  --color-marca-suave: rgba(62, 102, 128, 0.12);
+  /* Neutros (fundo e texto) */
+  --color-fundo: #191c1f;
+  --color-fundo-elevado: #232629;
+  --color-superficie: #232629;
+  --color-superficie-hover: #2b2f33;
+  --color-borda: #383d42;
+  --color-borda-forte: #383d42;
 
-  /* Acento secundário (bronze quente) */
-  --color-acento: #c9a97e;
-  --color-acento-suave: rgba(201, 169, 126, 0.28);
+  --color-texto-primario: #eceef0;
+  --color-texto-secundario: #9aa0a6;
+  /* Clareado de #676d73 (valor bruto do plugin) para #7d838a — o original
+     cai a ~3.3:1 sobre --color-fundo em rótulos pequenos (10-11px), abaixo
+     do piso AA de 4.5:1; este valor mantém o papel "terciário" a ~4.8:1. */
+  --color-texto-suave: #7d838a;
 
-  /* Texto */
-  --color-texto-primario: #232527;
-  --color-texto-secundario: #6b6e72;
-  --color-texto-suave: #9a9ca3;
+  /* Marca — accent azul-elétrico (uso único de destaque) */
+  --color-marca: #3d9bd6;
+  --color-marca-hover: #5cb0e3;
+  --color-marca-escura: #1d5074;
+  --color-marca-suave: #1b2f3d;
+  --color-acento-soft: #6cb8e6;
+  --color-texto-sobre-marca: #f3fafe;
 
-  /* Tipografia */
-  --font-titulo: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-corpo: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Semânticas — só em contexto real de status */
+  --color-sucesso: #3fcf80;
+  --color-aviso: #dba53f;
+  --color-erro: #e5695f;
 
-  /* Raios — cantos suaves, premium */
-  --radius-quadro: 16px;
+  /* Dourado — estritamente decorativo (favorito/avaliação) */
+  --color-acento: #d1a44c;
+
+  /* Superfície invertida — CTA de contraste máximo, 1–2 usos por tela */
+  --color-invertido-fundo: #eef1f3;
+  --color-invertido-fundo-hover: #dfe3e6;
+  --color-invertido-texto: #14171a;
+
+  /* Tipografia — sem web font, mesma decisão do plugin (carregamento instantâneo) */
+  --font-titulo:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-corpo: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+
+  /* Raios — geometria contida e técnica */
+  --radius-botao: 6px;
+  --radius-quadro: 10px;
+  --radius-modal: 14px;
   --radius-selo: 999px;
 
-  --shadow-quadro: 0 24px 48px -28px rgba(44, 44, 42, 0.18);
-  --shadow-suave: 0 8px 24px -16px rgba(44, 44, 42, 0.12);
+  /* Sombras — sempre pretas profundas, nunca azuladas; inner highlight simula chanfro físico */
+  --shadow-quadro:
+    0 24px 48px -28px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-suave: 0 8px 24px -16px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 html {
@@ -48,7 +71,7 @@ body {
 
 ::selection {
   background-color: var(--color-marca);
-  color: #ffffff;
+  color: var(--color-texto-sobre-marca);
 }
 
 ::-webkit-scrollbar {
@@ -58,7 +81,7 @@ body {
   background: var(--color-fundo);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-borda-forte);
+  background: var(--color-borda);
   border-radius: 999px;
 }
 
@@ -82,8 +105,9 @@ body {
   text-wrap: balance;
 }
 
-/* Rótulos numéricos discretos (índices de seção, contadores) */
+/* Rótulos numéricos: preço, contagem, timecode, chave de licença — sempre monoespaçados */
 .numero-tecnico {
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }

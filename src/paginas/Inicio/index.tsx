@@ -77,7 +77,7 @@ export default function Inicio() {
     <>
       <a
         href="#conteudo-principal"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-fundo-elevado focus:px-4 focus:py-2 focus:text-sm focus:text-texto-primario focus:shadow-quadro"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-botao focus:bg-fundo-elevado focus:px-4 focus:py-2 focus:text-sm focus:text-texto-primario focus:shadow-quadro"
       >
         {t("comuns.pularParaConteudo", "Pular para o conteúdo")}
       </a>

@@ -13,10 +13,10 @@ import { useMetadadosPagina } from "../../ganchos/useMetadadosPagina";
 import type { RespostaPortal, StatusLicencaPortal } from "../../tipos";
 
 const CORES_STATUS: Record<StatusLicencaPortal, string> = {
-  ACTIVE: "border-emerald-500/30 bg-emerald-500/10 text-emerald-700",
-  BLOCKED: "border-red-500/30 bg-red-500/10 text-red-700",
-  EXPIRED: "border-amber-500/30 bg-amber-500/10 text-amber-700",
-  REFUNDED: "border-red-500/30 bg-red-500/10 text-red-700",
+  ACTIVE: "border-sucesso/30 bg-sucesso/10 text-sucesso",
+  BLOCKED: "border-erro/30 bg-erro/10 text-erro",
+  EXPIRED: "border-aviso/30 bg-aviso/10 text-aviso",
+  REFUNDED: "border-erro/30 bg-erro/10 text-erro",
   CANCELED: "border-texto-suave/30 bg-superficie text-texto-secundario",
 };
 
@@ -53,7 +53,7 @@ function FormularioLogin({ aoLogar }: { aoLogar: (r: RespostaPortal) => void }) 
   const [telaEsqueci, setTelaEsqueci] = useState(false);
 
   const inputClasses =
-    "w-full rounded-xl border border-borda bg-fundo-elevado px-4 py-2.5 text-sm text-texto-primario placeholder:text-texto-suave focus:border-marca focus:outline-none";
+    "w-full rounded-botao border border-borda bg-fundo-elevado px-4 py-2.5 text-sm text-texto-primario placeholder:text-texto-suave focus:border-marca focus:outline-none";
 
   const aoEnviar = async (e: FormEvent) => {
     e.preventDefault();
@@ -117,7 +117,7 @@ function FormularioLogin({ aoLogar }: { aoLogar: (r: RespostaPortal) => void }) 
           </label>
         </div>
 
-        {erro && <p className="mt-4 text-sm text-red-600">{erro}</p>}
+        {erro && <p className="mt-4 text-sm text-erro">{erro}</p>}
 
         <Botao type="submit" tamanho="lg" className="mt-6 w-full" desabilitado={carregando}>
           {carregando ? t("conta.login.botaoEntrando") : t("conta.login.botaoEntrar")}
@@ -136,7 +136,7 @@ function FormularioLogin({ aoLogar }: { aoLogar: (r: RespostaPortal) => void }) 
 }
 
 function mesclarUpper(base: string): string {
-  return `${base} uppercase placeholder:normal-case`;
+  return `${base} numero-tecnico uppercase placeholder:normal-case`;
 }
 
 function FormularioEsqueciChave({ aoVoltar }: { aoVoltar: () => void }) {
@@ -181,10 +181,10 @@ function FormularioEsqueciChave({ aoVoltar }: { aoVoltar: () => void }) {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-6 w-full rounded-xl border border-borda bg-fundo-elevado px-4 py-2.5 text-sm text-texto-primario placeholder:text-texto-suave focus:border-marca focus:outline-none"
+              className="mt-6 w-full rounded-botao border border-borda bg-fundo-elevado px-4 py-2.5 text-sm text-texto-primario placeholder:text-texto-suave focus:border-marca focus:outline-none"
               placeholder="voce@email.com"
             />
-            {erro && <p className="mt-3 text-sm text-red-600">{erro}</p>}
+            {erro && <p className="mt-3 text-sm text-erro">{erro}</p>}
             <Botao type="submit" tamanho="lg" className="mt-6 w-full" desabilitado={carregando}>
               {carregando ? t("conta.login.esqueciEnviando") : t("conta.login.esqueciBotao")}
             </Botao>

@@ -1,6 +1,6 @@
 import type { ReactNode, MouseEventHandler } from "react";
 
-export type VarianteBotao = "primario" | "secundario" | "fantasma";
+export type VarianteBotao = "primario" | "secundario" | "fantasma" | "invertido";
 export type TamanhoBotao = "sm" | "md" | "lg";
 
 export interface PropriedadesBotao {

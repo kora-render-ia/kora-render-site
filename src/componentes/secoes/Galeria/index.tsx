@@ -14,11 +14,7 @@ export default function Galeria() {
   return (
     <section id="galeria" className="py-20 lg:py-28">
       <Contentor className="flex flex-col gap-10">
-        <CabecalhoSecao
-          numero="05"
-          marcador={t("galeria.marcador")}
-          titulo={t("galeria.titulo")}
-        />
+        <CabecalhoSecao numero="05" marcador={t("galeria.marcador")} titulo={t("galeria.titulo")} />
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {itensGaleria.map((item, i) => (
@@ -27,10 +23,7 @@ export default function Galeria() {
         </div>
       </Contentor>
 
-      <VisualizadorGaleria
-        item={itemSelecionado}
-        aoFechar={() => definirItemSelecionado(null)}
-      />
+      <VisualizadorGaleria item={itemSelecionado} aoFechar={() => definirItemSelecionado(null)} />
     </section>
   );
 }
