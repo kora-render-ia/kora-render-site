@@ -1,6 +1,7 @@
 import { useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Inicio from "./paginas/Inicio";
 
 // Carregada sob demanda: mantém o bundle inicial da landing page (rota "/")
@@ -32,6 +33,7 @@ export default function App() {
             em vez de renderizar uma página em branco (Routes sem match). */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <SpeedInsights />
     </BrowserRouter>
   );
 }

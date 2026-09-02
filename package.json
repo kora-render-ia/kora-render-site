@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.42.2",
     "i18next": "^26.3.4",
     "i18next-browser-languagedetector": "^8.2.1",
