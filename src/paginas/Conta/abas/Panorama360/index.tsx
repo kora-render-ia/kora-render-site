@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineExclamationTriangle, HiOutlineArrowUturnLeft } from "react-icons/hi2";
 import Botao from "../../../../componentes/comuns/Botao";
 import UploadPanorama from "./componentes/UploadPanorama";
-import VisualizadorPanorama from "./componentes/VisualizadorPanorama";
+import CompartilharPanorama from "./componentes/CompartilharPanorama";
+import VisualizadorPanorama from "../../../../componentes/VisualizadorPanorama360";
 import {
   arquivoEhImagemSuportada,
   lerDimensoesImagem,
@@ -64,6 +65,7 @@ export default function AbaPanorama360() {
           fase: "pronto",
           info: {
             url,
+            arquivo,
             nomeArquivo: arquivo.name,
             largura,
             altura,
@@ -104,16 +106,18 @@ export default function AbaPanorama360() {
               </p>
             )}
           </div>
-          <Botao
-            variante="fantasma"
-            tamanho="sm"
-            icone={<HiOutlineArrowUturnLeft size={14} aria-hidden="true" />}
-            posicaoIcone="esquerda"
-            aoClicar={aoTrocarImagem}
-            className="shrink-0"
-          >
-            {t("conta.panorama360.trocarImagem")}
-          </Botao>
+          <div className="flex shrink-0 items-center gap-2">
+            <CompartilharPanorama key={estado.info.url} arquivo={estado.info.arquivo} />
+            <Botao
+              variante="fantasma"
+              tamanho="sm"
+              icone={<HiOutlineArrowUturnLeft size={14} aria-hidden="true" />}
+              posicaoIcone="esquerda"
+              aoClicar={aoTrocarImagem}
+            >
+              {t("conta.panorama360.trocarImagem")}
+            </Botao>
+          </div>
         </div>
 
         <div className="relative flex-1">

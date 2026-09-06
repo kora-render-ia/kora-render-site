@@ -1,5 +1,6 @@
 export interface InfoImagemPanorama {
   url: string;
+  arquivo: File;
   nomeArquivo: string;
   largura: number;
   altura: number;

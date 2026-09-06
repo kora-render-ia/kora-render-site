@@ -364,6 +364,13 @@
       "carregando": "Loading panorama...",
       "avisoProporcao": "This image doesn't have the recommended 2:1 panoramic ratio for 360° viewing. The result may not display correctly.",
       "trocarImagem": "Change image",
+      "compartilhar": {
+        "botao": "Share",
+        "descricao": "Anyone with this link can view the panorama, no account needed.",
+        "enviando": "Generating link...",
+        "copiar": "Copy link",
+        "erro": "Couldn't generate the link right now. Please try again."
+      },
       "upload": {
         "tituloArraste": "Drag your panoramic image here",
         "ou": "or",
@@ -391,5 +398,10 @@
         "erroDesconhecido": "This panorama could not be displayed. Try again or use another image."
       }
     }
+  },
+  "panoramaPublico": {
+    "tituloPagina": "360° Panorama — {{nome}}",
+    "descricaoPagina": "View this shared 360° panorama.",
+    "linkInvalido": "This panorama link is invalid or has expired."
   }
 }

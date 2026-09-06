@@ -5,7 +5,7 @@ import {
   HiOutlineArrowsPointingIn,
   HiOutlineViewfinderCircle,
 } from "react-icons/hi2";
-import { mesclarClasses } from "../../../../../../utilitarios/mesclarClasses";
+import { mesclarClasses } from "../../../utilitarios/mesclarClasses";
 
 interface PropriedadesControlesPanorama {
   autoRotateAtivo: boolean;

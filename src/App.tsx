@@ -8,6 +8,10 @@ import Inicio from "./paginas/Inicio";
 // livre do código de autenticação/portal, que só é necessário em /conta.
 const Conta = lazy(() => import("./paginas/Conta"));
 
+// Página pública de visualização de um panorama compartilhado — sem login,
+// mas separada da landing page pra não carregar o Pannellum ali.
+const PanoramaPublico = lazy(() => import("./paginas/PanoramaPublico"));
+
 export default function App() {
   const { i18n } = useTranslation();
 
@@ -26,6 +30,14 @@ export default function App() {
           element={
             <Suspense fallback={null}>
               <Conta />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/panorama"
+          element={
+            <Suspense fallback={null}>
+              <PanoramaPublico />
             </Suspense>
           }
         />

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import ControlesPanorama from "../ControlesPanorama";
+import ControlesPanorama from "./ControlesPanorama";
 import "pannellum/build/pannellum.css";
 import "pannellum/build/pannellum.js";
 import "./pannellumOverrides.css";
