@@ -22,7 +22,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route
-          path="/conta"
+          path="/conta/*"
           element={
             <Suspense fallback={null}>
               <Conta />

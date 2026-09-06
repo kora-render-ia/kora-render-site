@@ -1,0 +1,15 @@
+/* Remove toda a UI padrão do Pannellum (controles, compass, caixas de carregamento
+   e erro): o Lumi Render usa sua própria camada de controles e estados, para manter
+   a mesma identidade visual do resto do produto. */
+.pnlm-container .pnlm-load-box,
+.pnlm-container .pnlm-load-button,
+.pnlm-container .pnlm-error-msg,
+.pnlm-container .pnlm-panorama-info,
+.pnlm-container .pnlm-controls-container,
+.pnlm-container .pnlm-compass {
+  display: none !important;
+}
+
+.pnlm-container {
+  background: var(--color-fundo) !important;
+}

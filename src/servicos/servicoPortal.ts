@@ -2,7 +2,7 @@ import type { RespostaPortal } from "../tipos";
 
 // Se VITE_API_URL não for definida no build, cai pra API de produção — nunca
 // pra localhost, pra não quebrar um deploy real esquecido de configurar.
-const URL_BASE = import.meta.env.VITE_API_URL || "https://api.korarender.com.br";
+const URL_BASE = import.meta.env.VITE_API_URL || "https://api.lumirender.com.br";
 
 const CHAVE_TOKEN = "kr_portal_token";
 

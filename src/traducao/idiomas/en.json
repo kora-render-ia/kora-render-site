@@ -255,6 +255,124 @@
       "EXPIRED": "Expired",
       "REFUNDED": "Refunded",
       "CANCELED": "Canceled"
+    },
+    "nav": {
+      "downloads": "Downloads",
+      "videos": "Videos",
+      "panorama360": "360°"
+    },
+    "videos": {
+      "titulo": "AI Video",
+      "descricao": "Turn an image into a short video with camera movement and ambient effects, using your own Runway API key.",
+      "carregandoImagem": "Preparing image...",
+      "botaoGerar": "Generate video",
+      "gerando": "Generating video...",
+      "tentativaProgresso": "Checking progress ({{atual}}/{{total}})",
+      "chave": {
+        "titulo": "Connect your Runway key",
+        "descricao": "Lumi uses the Runway API (Gen-4 Turbo) to generate videos. Create a free account, generate your API key and paste it below — it's saved only in your browser.",
+        "linkCriar": "Create a key at dev.runwayml.com",
+        "rotulo": "Runway API key",
+        "marcador": "Paste your key here",
+        "botaoTestarSalvar": "Test and save",
+        "testando": "Testing key...",
+        "botaoRemover": "Change key",
+        "chaveInvalida": "This key isn't valid. Check that you copied it correctly."
+      },
+      "upload": {
+        "tituloArraste": "Drag your image here",
+        "ou": "or",
+        "botaoSelecionar": "Select image",
+        "formatosAceitos": "Supported formats: JPG, PNG and WEBP."
+      },
+      "pills": {
+        "grupoCamera": "Camera",
+        "grupoInterno": "Interior",
+        "grupoExterno": "Exterior",
+        "grupoIluminacao": "Lighting",
+        "itens": {
+          "zoomIn": "Zoom in",
+          "zoomOut": "Zoom out",
+          "deslizamentoHorizontal": "Horizontal slide",
+          "rotacionar": "Rotate",
+          "movimentoOrbital": "Orbital motion",
+          "cortinaVento": "Curtain in the wind",
+          "torneiraAberta": "Running faucet",
+          "persianaMovimento": "Moving blinds",
+          "arvoresMovimento": "Trees moving",
+          "aguaMovimento": "Pool water motion",
+          "cascataFluindo": "Flowing waterfall",
+          "timelapse": "Timelapse",
+          "nuvensPassando": "Clouds passing",
+          "sombrasDeslocando": "Shifting shadows",
+          "acenderLuzes": "Lights turning on"
+        }
+      },
+      "textoLivre": {
+        "rotulo": "Describe the movement (optional)",
+        "marcador": "E.g.: the pool water gently ripples...",
+        "dica": "Tip: write in English for a more accurate result."
+      },
+      "duracao": {
+        "rotulo": "Duration",
+        "opcao5s": "5 seconds",
+        "opcao10s": "10 seconds"
+      },
+      "pronto": {
+        "baixar": "Download video",
+        "gerarOutro": "Generate another video",
+        "trocarImagem": "Change image"
+      },
+      "historico": {
+        "titulo": "Generated videos",
+        "vazio": "Your generated videos will show up here.",
+        "remover": "Remove from history"
+      },
+      "erros": {
+        "tipoInvalido": "Unsupported format. Upload a JPG, PNG or WEBP image.",
+        "leituraFalhou": "This image could not be read. Check the file and try again.",
+        "chaveInvalida": "Your Runway key isn't valid.",
+        "creditosInsuficientes": "Insufficient credits in your Runway account.",
+        "limiteAtingido": "Usage limit reached, wait a moment and try again.",
+        "geracaoFalhou": "Generation failed. Please try again.",
+        "timeoutPolling": "Generation took longer than expected. Credit may already have been used — check your Runway account before trying again.",
+        "erroGenerico": "Couldn't generate the video right now. Please try again."
+      }
+    },
+    "panorama360": {
+      "titulo": "360° Viewer",
+      "descricao": "Upload your panoramic image and explore your project in an immersive 360-degree experience.",
+      "carregando": "Loading panorama...",
+      "avisoProporcao": "This image doesn't have the recommended 2:1 panoramic ratio for 360° viewing. The result may not display correctly.",
+      "trocarImagem": "Change image",
+      "upload": {
+        "tituloArraste": "Drag your panoramic image here",
+        "ou": "or",
+        "botaoSelecionar": "Select image",
+        "formatosAceitos": "Supported formats: JPG, PNG and WEBP. For a correct 360° experience, use equirectangular panoramic images with an aspect ratio of approximately 2:1."
+      },
+      "erros": {
+        "tipoInvalido": "Unsupported format. Upload a JPG, PNG or WEBP image.",
+        "arquivoGrande": "This file is too large. Upload an image up to {{limite}}.",
+        "imagemGrande": "This image exceeds the maximum resolution supported by the viewer. Try a smaller version.",
+        "leituraFalhou": "This image could not be read. Check the file and try again."
+      },
+      "controles": {
+        "aproximar": "Zoom in",
+        "afastar": "Zoom out",
+        "resetar": "Reset view",
+        "autoRotateAtivar": "Enable auto-rotate",
+        "autoRotateDesativar": "Disable auto-rotate",
+        "telaCheiaAtivar": "Enter fullscreen",
+        "telaCheiaDesativar": "Exit fullscreen"
+      },
+      "mensagensVisualizador": {
+        "semImagem": "No panorama image was specified.",
+        "arquivoInacessivel": "The image file could not be accessed.",
+        "semSuporteWebGL": "Your browser doesn't support WebGL, which is required to display 360° panoramas.",
+        "tamanhoExcedido": "This image is too large for your device (%spx wide, limit is %spx). Try a smaller version.",
+        "erroDesconhecido": "This panorama could not be displayed. Try again or use another image."
+      }
     }
   }
 }
