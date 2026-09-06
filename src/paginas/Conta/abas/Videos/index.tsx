@@ -76,6 +76,14 @@ export default function AbaVideos() {
 
   const canceladoRef = useRef(false);
   const urlLocalAtualRef = useRef<string | null>(null);
+  // Sempre montado (nunca criado/destruído em runtime) — um <canvas> criado
+  // via document.createElement e só anexado fora da tela para de ser
+  // realmente composto pelo navegador depois de alguns segundos (o
+  // WebGLRenderer para de receber frames novos e a gravação sai vazia).
+  // Mantendo-o de verdade na árvore React, sempre no canto (0,0) da janela,
+  // evita esse corte — e de brinde dá pra mostrar a prévia ao vivo pro
+  // usuário durante a renderização.
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     // Reseta no setup (StrictMode monta/desmonta/remonta uma vez em dev — sem
@@ -126,6 +134,7 @@ export default function AbaVideos() {
     setPillsSelecionadas([]);
     setTextoLivre("");
     setMovimentoCamera("zoom-in");
+    setDuracao(5);
     if (urlLocalAtualRef.current) {
       URL.revokeObjectURL(urlLocalAtualRef.current);
       urlLocalAtualRef.current = null;
@@ -255,16 +264,10 @@ export default function AbaVideos() {
       const proporcao = imagem.largura / imagem.altura;
       const largura = RESOLUCAO_PARALLAX_MAXIMA;
       const altura = Math.max(1, Math.round(RESOLUCAO_PARALLAX_MAXIMA / proporcao));
-      const canvas = document.createElement("canvas");
+      const canvas = canvasRef.current;
+      if (!canvas) throw new Error("canvas_indisponivel");
       canvas.width = largura;
       canvas.height = altura;
-      // Precisa estar no DOM (fora da tela, nunca display:none) pra o
-      // navegador realmente compor o WebGL — um canvas desconectado não
-      // renderiza de verdade e captureStream() sai só com quadros vazios.
-      canvas.style.position = "fixed";
-      canvas.style.left = "-99999px";
-      canvas.style.top = "0";
-      document.body.appendChild(canvas);
 
       const cena = criarCenaParallax(
         canvas,
@@ -284,7 +287,6 @@ export default function AbaVideos() {
         definirEstado({ fase: "pronto", imagem, urlVideo });
       } finally {
         cena.destruir();
-        canvas.remove();
       }
     } catch {
       if (!canceladoRef.current) {
@@ -307,8 +309,23 @@ export default function AbaVideos() {
   const mensagemErroPainel = estado.fase === "erro" && estado.imagem ? estado.mensagem : null;
   const mostrarHistorico = chave !== null && (estado.fase === "sem-imagem" || estado.fase === "pronto");
 
+  const previaCameraVisivel = emGeracaoCamera && etapaCamera === "renderizando";
+
   return (
     <div className="mx-auto max-w-2xl px-6 py-14 sm:py-20">
+      {/* Sempre montado (ver comentário na definição de canvasRef) — só a
+          exibição muda: prévia ao vivo durante a renderização, senão
+          reduzido a um ponto fora do fluxo visual. */}
+      <canvas
+        ref={canvasRef}
+        aria-hidden="true"
+        className={
+          previaCameraVisivel
+            ? "mx-auto mb-6 block h-auto w-full max-w-2xl rounded-quadro border border-borda bg-fundo-elevado shadow-suave"
+            : "pointer-events-none fixed left-0 top-0 h-px w-px opacity-0"
+        }
+      />
+
       <div className="flex flex-wrap items-start justify-between gap-4 text-center sm:text-left">
         <div>
           <motion.h1

@@ -2,34 +2,39 @@ import * as THREE from "three";
 import type { IdMovimentoCamera } from "../tipos";
 
 const SEGMENTOS_MALHA = 180;
-const ESCALA_DESLOCAMENTO = 0.14;
+const ESCALA_DESLOCAMENTO = 0.22;
 
-// Amplitudes deliberadamente pequenas — isso não é uma cena 3D real, é uma
-// única imagem com profundidade estimada, então movimentos exagerados
-// esticam/rasgam a malha nas bordas. O objetivo é o "efeito paralaxe" sutil
-// de câmeras de vídeo profissionais, não uma órbita completa.
+// Amplitudes maiores que a v1 — a malha agora tem uma margem extra (ver
+// planoLargura/planoAltura) especificamente pra suportar esse movimento sem
+// expor fundo preto nas bordas. Ainda não é uma órbita completa: isso é uma
+// única imagem com profundidade estimada, não uma cena 3D real, então tem um
+// teto antes de começar a esticar/rasgar a malha visivelmente.
 function calcularPose(id: IdMovimentoCamera, progresso: number): { posicao: THREE.Vector3; alvo: THREE.Vector3 } {
   const suavizado = 0.5 - 0.5 * Math.cos(Math.PI * progresso);
   const alvo = new THREE.Vector3(0, 0, 0);
 
   switch (id) {
     case "zoom-in":
-      return { posicao: new THREE.Vector3(0, 0, 1.55 - suavizado * 0.35), alvo };
+      return { posicao: new THREE.Vector3(0, 0, 1.55 - suavizado * 0.6), alvo };
     case "zoom-out":
-      return { posicao: new THREE.Vector3(0, 0, 1.2 + suavizado * 0.35), alvo };
+      return { posicao: new THREE.Vector3(0, 0, 0.95 + suavizado * 0.6), alvo };
     case "deslizamento-horizontal":
-      return { posicao: new THREE.Vector3(-0.12 + suavizado * 0.24, 0, 1.3), alvo };
+      return { posicao: new THREE.Vector3(-0.25 + suavizado * 0.5, 0, 1.3), alvo };
     case "rotacionar": {
-      const angulo = (-0.035 + suavizado * 0.07) * Math.PI;
+      const angulo = (-0.06 + suavizado * 0.12) * Math.PI;
       return {
         posicao: new THREE.Vector3(Math.sin(angulo) * 1.3, 0, Math.cos(angulo) * 1.3),
         alvo,
       };
     }
     case "movimento-orbital": {
-      const angulo = (-0.09 + suavizado * 0.18) * Math.PI;
+      // Girar em arco (não translação reta) é o que mais expõe a borda do
+      // plano — é só uma imagem plana com profundidade estimada, sem
+      // conteúdo real atrás. Amplitude deliberadamente menor que os outros
+      // movimentos por causa disso.
+      const angulo = (-0.11 + suavizado * 0.22) * Math.PI;
       return {
-        posicao: new THREE.Vector3(Math.sin(angulo) * 1.35, 0.03, Math.cos(angulo) * 1.35),
+        posicao: new THREE.Vector3(Math.sin(angulo) * 1.35, 0.05, Math.cos(angulo) * 1.35),
         alvo,
       };
     }
@@ -55,10 +60,12 @@ export function criarCenaParallax(
 
   const cena = new THREE.Scene();
   const proporcao = largura / altura;
-  const camera = new THREE.PerspectiveCamera(45, proporcao, 0.1, 10);
+  const camera = new THREE.PerspectiveCamera(50, proporcao, 0.1, 10);
 
-  const planoLargura = proporcao >= 1 ? 1.6 : 1.6 * proporcao;
-  const planoAltura = proporcao >= 1 ? 1.6 / proporcao : 1.6;
+  // Maior que o enquadramento da câmera de propósito: dá margem pro
+  // movimento aumentado acima sem revelar fundo preto nas bordas.
+  const planoLargura = proporcao >= 1 ? 2.1 : 2.1 * proporcao;
+  const planoAltura = proporcao >= 1 ? 2.1 / proporcao : 2.1;
 
   const geometria = new THREE.PlaneGeometry(planoLargura, planoAltura, SEGMENTOS_MALHA, SEGMENTOS_MALHA);
   const texturaCor = new THREE.CanvasTexture(imagemCor);
