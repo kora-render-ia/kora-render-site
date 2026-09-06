@@ -263,16 +263,41 @@
     },
     "videos": {
       "titulo": "AI Video",
-      "descricao": "Turn an image into a short video with camera movement and ambient effects, using your own Runway API key.",
+      "descricao": "Turn an image into a short video: free camera movement rendered in your browser, or ambient effects with AI using your own fal.ai key.",
       "carregandoImagem": "Preparing image...",
       "botaoGerar": "Generate video",
       "gerando": "Generating video...",
       "tentativaProgresso": "Checking progress ({{atual}}/{{total}})",
+      "modo": {
+        "camera": {
+          "titulo": "Camera movement",
+          "descricao": "Free · instant"
+        },
+        "ia": {
+          "titulo": "AI effect",
+          "descricao": "Uses your fal.ai key"
+        }
+      },
+      "camera": {
+        "tituloSecao": "Movement",
+        "gerando": {
+          "profundidade": "Analyzing image depth...",
+          "renderizando": "Rendering the video..."
+        },
+        "semSuporteGravacao": "Your browser doesn't support recording this video locally. Try Chrome, Edge or Firefox.",
+        "itens": {
+          "zoomIn": "Zoom in",
+          "zoomOut": "Zoom out",
+          "deslizamentoHorizontal": "Horizontal slide",
+          "rotacionar": "Rotate",
+          "movimentoOrbital": "Orbital motion"
+        }
+      },
       "chave": {
-        "titulo": "Connect your Runway key",
-        "descricao": "Lumi uses the Runway API (Gen-4 Turbo) to generate videos. Create a free account, generate your API key and paste it below — it's saved only in your browser.",
-        "linkCriar": "Create a key at dev.runwayml.com",
-        "rotulo": "Runway API key",
+        "titulo": "Connect your fal.ai key",
+        "descricao": "Lumi uses fal.ai (LTX Video model) to generate ambient effects. Create a free account, generate your API key and paste it below — it's saved only in your browser.",
+        "linkCriar": "Create a key at fal.ai/dashboard/keys",
+        "rotulo": "fal.ai API key",
         "marcador": "Paste your key here",
         "botaoTestarSalvar": "Test and save",
         "testando": "Testing key...",
@@ -286,16 +311,10 @@
         "formatosAceitos": "Supported formats: JPG, PNG and WEBP."
       },
       "pills": {
-        "grupoCamera": "Camera",
         "grupoInterno": "Interior",
         "grupoExterno": "Exterior",
         "grupoIluminacao": "Lighting",
         "itens": {
-          "zoomIn": "Zoom in",
-          "zoomOut": "Zoom out",
-          "deslizamentoHorizontal": "Horizontal slide",
-          "rotacionar": "Rotate",
-          "movimentoOrbital": "Orbital motion",
           "cortinaVento": "Curtain in the wind",
           "torneiraAberta": "Running faucet",
           "persianaMovimento": "Moving blinds",
@@ -331,11 +350,11 @@
       "erros": {
         "tipoInvalido": "Unsupported format. Upload a JPG, PNG or WEBP image.",
         "leituraFalhou": "This image could not be read. Check the file and try again.",
-        "chaveInvalida": "Your Runway key isn't valid.",
-        "creditosInsuficientes": "Insufficient credits in your Runway account.",
+        "chaveInvalida": "Your fal.ai key isn't valid.",
+        "creditosInsuficientes": "Insufficient credits in your fal.ai account.",
         "limiteAtingido": "Usage limit reached, wait a moment and try again.",
         "geracaoFalhou": "Generation failed. Please try again.",
-        "timeoutPolling": "Generation took longer than expected. Credit may already have been used — check your Runway account before trying again.",
+        "timeoutPolling": "Generation took longer than expected. Credit may already have been used — check your fal.ai account before trying again.",
         "erroGenerico": "Couldn't generate the video right now. Please try again."
       }
     },

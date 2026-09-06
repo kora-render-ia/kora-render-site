@@ -11,6 +11,9 @@ interface PropriedadesReprodutorVideoGerado {
 
 export default function ReprodutorVideoGerado({ urlVideo, aoGerarOutro }: PropriedadesReprodutorVideoGerado) {
   const { t } = useTranslation();
+  // Vídeos do parallax local (blob:) suportam download de verdade; vídeos
+  // remotos (fal.ai) só abrem em nova aba, já que a URL é de outro domínio.
+  const ehLocal = urlVideo.startsWith("blob:");
 
   return (
     <motion.div
@@ -28,8 +31,9 @@ export default function ReprodutorVideoGerado({ urlVideo, aoGerarOutro }: Propri
       <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
         <Botao
           href={urlVideo}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={ehLocal ? undefined : "_blank"}
+          rel={ehLocal ? undefined : "noopener noreferrer"}
+          download={ehLocal ? "video-lumi.webm" : undefined}
           variante="secundario"
           icone={<HiOutlineArrowDownTray size={15} aria-hidden="true" />}
         >

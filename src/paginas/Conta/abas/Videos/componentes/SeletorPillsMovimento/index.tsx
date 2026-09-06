@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { HiCheck } from "react-icons/hi2";
 import { mesclarClasses } from "../../../../../../utilitarios/mesclarClasses";
-import { catalogoPillsMovimento } from "../../dados/catalogoPillsMovimento";
+import { catalogoPillsAmbiente } from "../../dados/catalogoPillsMovimento";
 
 interface PropriedadesSeletorPillsMovimento {
   pillsSelecionadas: string[];
@@ -20,7 +20,7 @@ export default function SeletorPillsMovimento({
 
   return (
     <div className="flex flex-col gap-6">
-      {catalogoPillsMovimento.map((grupo) => (
+      {catalogoPillsAmbiente.map((grupo) => (
         <div key={grupo.chaveRotulo}>
           <p className="numero-tecnico text-[11px] uppercase tracking-wide text-texto-suave">
             {t(grupo.chaveRotulo)}

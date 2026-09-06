@@ -1,18 +1,18 @@
 import type { ItemHistoricoVideo } from "../tipos";
 
-const CHAVE_API_KEY = "kr_runway_api_key";
+const CHAVE_API_KEY = "kr_fal_api_key";
 const CHAVE_HISTORICO = "kr_video_historico";
 const LIMITE_HISTORICO = 20;
 
-export function obterChaveRunway(): string | null {
+export function obterChaveVideoIA(): string | null {
   return localStorage.getItem(CHAVE_API_KEY);
 }
 
-export function salvarChaveRunway(chave: string): void {
+export function salvarChaveVideoIA(chave: string): void {
   localStorage.setItem(CHAVE_API_KEY, chave);
 }
 
-export function removerChaveRunway(): void {
+export function removerChaveVideoIA(): void {
   localStorage.removeItem(CHAVE_API_KEY);
 }
 

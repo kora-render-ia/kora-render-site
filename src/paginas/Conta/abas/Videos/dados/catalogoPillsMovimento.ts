@@ -1,42 +1,20 @@
-import type { GrupoPills } from "../tipos";
+import type { GrupoPills, MovimentoCamera } from "../tipos";
 
-// Frases em inglês testadas e curadas — vão direto pra Runway sem tradução.
-// Só o rótulo (chave i18n) é exibido pro usuário.
-export const catalogoPillsMovimento: GrupoPills[] = [
-  {
-    chaveRotulo: "conta.videos.pills.grupoCamera",
-    pills: [
-      {
-        id: "zoom-in",
-        chaveRotulo: "conta.videos.pills.itens.zoomIn",
-        frase:
-          "The camera slowly moves forward, gradually approaching the scene with a smooth cinematic push-in.",
-      },
-      {
-        id: "zoom-out",
-        chaveRotulo: "conta.videos.pills.itens.zoomOut",
-        frase:
-          "The camera slowly pulls back, gradually moving away from the scene with a smooth cinematic dolly-out.",
-      },
-      {
-        id: "deslizamento-horizontal",
-        chaveRotulo: "conta.videos.pills.itens.deslizamentoHorizontal",
-        frase:
-          "The camera glides smoothly to the side, performing a slow lateral tracking shot across the scene.",
-      },
-      {
-        id: "rotacionar",
-        chaveRotulo: "conta.videos.pills.itens.rotacionar",
-        frase: "The camera performs a gentle, slow rotation, with a subtle cinematic turn.",
-      },
-      {
-        id: "movimento-orbital",
-        chaveRotulo: "conta.videos.pills.itens.movimentoOrbital",
-        frase:
-          "The camera slowly orbits around the main subject, smoothly circling it from one side to the other.",
-      },
-    ],
-  },
+// Movimentos de câmera puros — renderizados localmente via parallax (sem IA,
+// sem custo, ver src/paginas/Conta/abas/Videos/parallax). Não precisam de
+// frase em inglês porque não passam por nenhum modelo de geração.
+export const catalogoMovimentosCamera: MovimentoCamera[] = [
+  { id: "zoom-in", chaveRotulo: "conta.videos.camera.itens.zoomIn" },
+  { id: "zoom-out", chaveRotulo: "conta.videos.camera.itens.zoomOut" },
+  { id: "deslizamento-horizontal", chaveRotulo: "conta.videos.camera.itens.deslizamentoHorizontal" },
+  { id: "rotacionar", chaveRotulo: "conta.videos.camera.itens.rotacionar" },
+  { id: "movimento-orbital", chaveRotulo: "conta.videos.camera.itens.movimentoOrbital" },
+];
+
+// Pills de efeito ambiental — só essas passam pela IA (fal.ai/LTX), porque
+// sintetizam movimento que não existe na imagem original. Frases em inglês
+// testadas e curadas, enviadas direto no prompt.
+export const catalogoPillsAmbiente: GrupoPills[] = [
   {
     chaveRotulo: "conta.videos.pills.grupoInterno",
     pills: [

@@ -263,16 +263,41 @@
     },
     "videos": {
       "titulo": "Vídeo com IA",
-      "descricao": "Transforme uma imagem em um vídeo curto com movimento de câmera e efeitos ambientais, usando sua própria chave da Runway.",
+      "descricao": "Transforme uma imagem em um vídeo curto: movimento de câmera grátis no seu navegador, ou efeitos ambientais com IA usando sua própria chave da fal.ai.",
       "carregandoImagem": "Preparando imagem...",
       "botaoGerar": "Gerar vídeo",
       "gerando": "Gerando vídeo...",
       "tentativaProgresso": "Consultando andamento ({{atual}}/{{total}})",
+      "modo": {
+        "camera": {
+          "titulo": "Movimento de câmera",
+          "descricao": "Grátis · instantâneo"
+        },
+        "ia": {
+          "titulo": "Efeito com IA",
+          "descricao": "Usa sua chave fal.ai"
+        }
+      },
+      "camera": {
+        "tituloSecao": "Movimento",
+        "gerando": {
+          "profundidade": "Analisando profundidade da imagem...",
+          "renderizando": "Renderizando o vídeo..."
+        },
+        "semSuporteGravacao": "Seu navegador não suporta gravar esse vídeo localmente. Tente em outro navegador (Chrome, Edge ou Firefox).",
+        "itens": {
+          "zoomIn": "Zoom in",
+          "zoomOut": "Zoom out",
+          "deslizamentoHorizontal": "Deslizamento horizontal",
+          "rotacionar": "Rotacionar",
+          "movimentoOrbital": "Movimento orbital"
+        }
+      },
       "chave": {
-        "titulo": "Conecte sua chave da Runway",
-        "descricao": "O Lumi usa a API da Runway (Gen-4 Turbo) pra gerar os vídeos. Crie uma conta gratuita, gere sua chave de API e cole abaixo — ela fica salva só no seu navegador.",
-        "linkCriar": "Criar chave em dev.runwayml.com",
-        "rotulo": "Chave da API Runway",
+        "titulo": "Conecte sua chave da fal.ai",
+        "descricao": "O Lumi usa a fal.ai (modelo LTX Video) pra gerar os efeitos ambientais. Crie uma conta gratuita, gere sua chave de API e cole abaixo — ela fica salva só no seu navegador.",
+        "linkCriar": "Criar chave em fal.ai/dashboard/keys",
+        "rotulo": "Chave da API fal.ai",
         "marcador": "Cole sua chave aqui",
         "botaoTestarSalvar": "Testar e salvar",
         "testando": "Testando chave...",
@@ -286,16 +311,10 @@
         "formatosAceitos": "Formatos suportados: JPG, PNG e WEBP."
       },
       "pills": {
-        "grupoCamera": "Câmera",
         "grupoInterno": "Interno",
         "grupoExterno": "Externo",
         "grupoIluminacao": "Iluminação",
         "itens": {
-          "zoomIn": "Zoom in",
-          "zoomOut": "Zoom out",
-          "deslizamentoHorizontal": "Deslizamento horizontal",
-          "rotacionar": "Rotacionar",
-          "movimentoOrbital": "Movimento orbital",
           "cortinaVento": "Cortina ao vento",
           "torneiraAberta": "Torneira aberta",
           "persianaMovimento": "Persiana em movimento",
@@ -331,11 +350,11 @@
       "erros": {
         "tipoInvalido": "Formato não suportado. Envie uma imagem JPG, PNG ou WEBP.",
         "leituraFalhou": "Não foi possível ler esta imagem. Verifique o arquivo e tente novamente.",
-        "chaveInvalida": "Sua chave da Runway não é válida.",
-        "creditosInsuficientes": "Créditos insuficientes na sua conta Runway.",
+        "chaveInvalida": "Sua chave da fal.ai não é válida.",
+        "creditosInsuficientes": "Créditos insuficientes na sua conta fal.ai.",
         "limiteAtingido": "Limite de uso atingido, aguarde e tente novamente.",
         "geracaoFalhou": "A geração falhou. Tente novamente.",
-        "timeoutPolling": "A geração demorou mais que o esperado. O crédito pode já ter sido consumido — verifique sua conta Runway antes de tentar de novo.",
+        "timeoutPolling": "A geração demorou mais que o esperado. O crédito pode já ter sido consumido — verifique sua conta fal.ai antes de tentar de novo.",
         "erroGenerico": "Não foi possível gerar o vídeo agora. Tente novamente."
       }
     },

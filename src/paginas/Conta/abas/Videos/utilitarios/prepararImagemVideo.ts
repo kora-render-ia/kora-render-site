@@ -13,6 +13,7 @@ export function arquivoEhImagemSuportada(arquivo: File): boolean {
 
 interface ImagemPreparada {
   dataUrl: string;
+  blob: Blob;
   largura: number;
   altura: number;
 }
@@ -26,9 +27,20 @@ function carregarImagem(url: string): Promise<HTMLImageElement> {
   });
 }
 
-// Redimensiona (lado maior ≤1280px, lado menor ≥300px, mantendo proporção),
-// converte pra JPEG e devolve as dimensões FINAIS (pós-conversão) — usadas
-// depois pra escolher o ratio mais próximo aceito pela Runway.
+function canvasParaBlob(canvas: HTMLCanvasElement): Promise<Blob> {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => (blob ? resolve(blob) : reject(new Error("Não foi possível processar esta imagem."))),
+      "image/jpeg",
+      QUALIDADE_JPEG
+    );
+  });
+}
+
+// Redimensiona (lado maior ≤1280px, lado menor ≥300px, mantendo proporção) e
+// converte pra JPEG. Devolve tanto um data URL (preview na UI) quanto o Blob
+// (usado pro upload real ao fal.ai) e as dimensões finais pós-conversão —
+// tanto o parallax local quanto a geração por IA usam essa mesma preparação.
 export async function prepararImagemVideo(arquivo: File): Promise<ImagemPreparada> {
   const urlOriginal = URL.createObjectURL(arquivo);
 
@@ -57,8 +69,11 @@ export async function prepararImagemVideo(arquivo: File): Promise<ImagemPreparad
     if (!contexto) throw new Error("Não foi possível processar esta imagem.");
     contexto.drawImage(imagem, 0, 0, largura, altura);
 
-    const dataUrl = canvas.toDataURL("image/jpeg", QUALIDADE_JPEG);
-    return { dataUrl, largura, altura };
+    const [dataUrl, blob] = await Promise.all([
+      Promise.resolve(canvas.toDataURL("image/jpeg", QUALIDADE_JPEG)),
+      canvasParaBlob(canvas),
+    ]);
+    return { dataUrl, blob, largura, altura };
   } finally {
     URL.revokeObjectURL(urlOriginal);
   }

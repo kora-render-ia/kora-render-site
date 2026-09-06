@@ -9,6 +9,7 @@ export interface PropriedadesBotao {
   href?: string;
   target?: string;
   rel?: string;
+  download?: string | boolean;
   icone?: ReactNode;
   posicaoIcone?: "esquerda" | "direita";
   children: ReactNode;

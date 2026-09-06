@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import { HiOutlineArrowTopRightOnSquare } from "react-icons/hi2";
 import Botao from "../../../../../../componentes/comuns/Botao";
 import MoldeCantos from "../../../../../../componentes/ui/MoldeCantos";
-import { servicoRunway } from "../../../../../../servicos/servicoRunway";
-import { salvarChaveRunway } from "../../utilitarios/armazenamentoVideo";
+import { servicoVideoIA } from "../../../../../../servicos/servicoVideoIA";
+import { salvarChaveVideoIA } from "../../utilitarios/armazenamentoVideo";
 
-const URL_CRIAR_CHAVE = "https://dev.runwayml.com";
+const URL_CRIAR_CHAVE = "https://fal.ai/dashboard/keys";
 
-interface PropriedadesConfiguracaoChaveRunway {
+interface PropriedadesConfiguracaoChaveVideoIA {
   aoConfigurada: (chave: string) => void;
 }
 
-export default function ConfiguracaoChaveRunway({ aoConfigurada }: PropriedadesConfiguracaoChaveRunway) {
+export default function ConfiguracaoChaveVideoIA({ aoConfigurada }: PropriedadesConfiguracaoChaveVideoIA) {
   const { t } = useTranslation();
   const [chave, setChave] = useState("");
   const [testando, setTestando] = useState(false);
@@ -30,12 +30,12 @@ export default function ConfiguracaoChaveRunway({ aoConfigurada }: PropriedadesC
     setErro(null);
     setTestando(true);
     try {
-      const valida = await servicoRunway.validarChave(valor);
+      const valida = await servicoVideoIA.validarChave(valor);
       if (!valida) {
         setErro(t("conta.videos.chave.chaveInvalida"));
         return;
       }
-      salvarChaveRunway(valor);
+      salvarChaveVideoIA(valor);
       aoConfigurada(valor);
     } catch {
       setErro(t("conta.videos.erros.erroGenerico"));
