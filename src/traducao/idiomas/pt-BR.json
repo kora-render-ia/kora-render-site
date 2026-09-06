@@ -377,8 +377,6 @@
         "leituraFalhou": "Não foi possível ler esta imagem. Verifique o arquivo e tente novamente."
       },
       "controles": {
-        "aproximar": "Aumentar zoom",
-        "afastar": "Diminuir zoom",
         "resetar": "Resetar visualização",
         "autoRotateAtivar": "Ativar giro automático",
         "autoRotateDesativar": "Desativar giro automático",

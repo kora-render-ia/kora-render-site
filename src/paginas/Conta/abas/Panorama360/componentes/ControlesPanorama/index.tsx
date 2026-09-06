@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 import {
-  HiOutlineMagnifyingGlassPlus,
-  HiOutlineMagnifyingGlassMinus,
   HiOutlineArrowPath,
   HiOutlineArrowsPointingOut,
   HiOutlineArrowsPointingIn,
@@ -12,8 +10,6 @@ import { mesclarClasses } from "../../../../../../utilitarios/mesclarClasses";
 interface PropriedadesControlesPanorama {
   autoRotateAtivo: boolean;
   emTelaCheia: boolean;
-  aoAproximar: () => void;
-  aoAfastar: () => void;
   aoResetar: () => void;
   aoAlternarAutoRotate: () => void;
   aoAlternarTelaCheia: () => void;
@@ -22,8 +18,6 @@ interface PropriedadesControlesPanorama {
 export default function ControlesPanorama({
   autoRotateAtivo,
   emTelaCheia,
-  aoAproximar,
-  aoAfastar,
   aoResetar,
   aoAlternarAutoRotate,
   aoAlternarTelaCheia,
@@ -36,28 +30,6 @@ export default function ControlesPanorama({
 
   return (
     <div className="pointer-events-auto flex items-center gap-2 rounded-quadro border border-borda bg-fundo-elevado/80 p-1.5 shadow-quadro backdrop-blur-sm">
-      <button
-        type="button"
-        onClick={aoAfastar}
-        aria-label={t("conta.panorama360.controles.afastar")}
-        title={t("conta.panorama360.controles.afastar")}
-        className={classeBotao}
-      >
-        <HiOutlineMagnifyingGlassMinus size={17} aria-hidden="true" />
-      </button>
-
-      <button
-        type="button"
-        onClick={aoAproximar}
-        aria-label={t("conta.panorama360.controles.aproximar")}
-        title={t("conta.panorama360.controles.aproximar")}
-        className={classeBotao}
-      >
-        <HiOutlineMagnifyingGlassPlus size={17} aria-hidden="true" />
-      </button>
-
-      <span className="mx-0.5 h-6 w-px bg-borda" aria-hidden="true" />
-
       <button
         type="button"
         onClick={aoResetar}

@@ -6,10 +6,12 @@ import "pannellum/build/pannellum.css";
 import "pannellum/build/pannellum.js";
 import "./pannellumOverrides.css";
 
-const HFOV_INICIAL = 100;
-const HFOV_MINIMO = 40;
-const HFOV_MAXIMO = 118;
-const PASSO_ZOOM = 12;
+// "Zoom mínimo" aqui é o hfov mais alto (ângulo mais aberto): menos ampliação
+// da textura equiretangular, então a imagem chega mais nítida. O visualizador
+// abre travado nesse valor — sem botões de zoom e sem interações de zoom
+// (roda do mouse, duplo clique, teclado, pinça) — fixando min/maxHfov no
+// mesmo número, que é o jeito do Pannellum de travar completamente o hfov.
+const HFOV_FIXO = 118;
 const VELOCIDADE_AUTOROTATE = -2;
 
 interface PropriedadesVisualizadorPanorama {
@@ -41,13 +43,13 @@ export default function VisualizadorPanorama({ url, aoFalhar }: PropriedadesVisu
       showControls: false,
       compass: false,
       draggable: true,
-      mouseZoom: true,
-      doubleClickZoom: true,
-      keyboardZoom: true,
+      mouseZoom: false,
+      doubleClickZoom: false,
+      keyboardZoom: false,
       friction: 0.15,
-      hfov: HFOV_INICIAL,
-      minHfov: HFOV_MINIMO,
-      maxHfov: HFOV_MAXIMO,
+      hfov: HFOV_FIXO,
+      minHfov: HFOV_FIXO,
+      maxHfov: HFOV_FIXO,
       pitch: 0,
       yaw: 0,
       backgroundColor: [0x19 / 255, 0x1c / 255, 0x1f / 255],
@@ -96,22 +98,10 @@ export default function VisualizadorPanorama({ url, aoFalhar }: PropriedadesVisu
     return () => document.removeEventListener("fullscreenchange", aoMudarTelaCheia);
   }, []);
 
-  const aoAproximar = useCallback(() => {
-    const viewer = viewerRef.current;
-    if (!viewer) return;
-    viewer.setHfov(Math.max(HFOV_MINIMO, viewer.getHfov() - PASSO_ZOOM), 200);
-  }, []);
-
-  const aoAfastar = useCallback(() => {
-    const viewer = viewerRef.current;
-    if (!viewer) return;
-    viewer.setHfov(Math.min(HFOV_MAXIMO, viewer.getHfov() + PASSO_ZOOM), 200);
-  }, []);
-
   const aoResetar = useCallback(() => {
     viewerRef.current?.stopAutoRotate();
     setAutoRotateAtivo(false);
-    viewerRef.current?.lookAt(0, 0, HFOV_INICIAL, 600);
+    viewerRef.current?.lookAt(0, 0, HFOV_FIXO, 600);
   }, []);
 
   const aoAlternarAutoRotate = useCallback(() => {
@@ -166,8 +156,6 @@ export default function VisualizadorPanorama({ url, aoFalhar }: PropriedadesVisu
           <ControlesPanorama
             autoRotateAtivo={autoRotateAtivo}
             emTelaCheia={emTelaCheia}
-            aoAproximar={aoAproximar}
-            aoAfastar={aoAfastar}
             aoResetar={aoResetar}
             aoAlternarAutoRotate={aoAlternarAutoRotate}
             aoAlternarTelaCheia={aoAlternarTelaCheia}

@@ -377,8 +377,6 @@
         "leituraFalhou": "This image could not be read. Check the file and try again."
       },
       "controles": {
-        "aproximar": "Zoom in",
-        "afastar": "Zoom out",
         "resetar": "Reset view",
         "autoRotateAtivar": "Enable auto-rotate",
         "autoRotateDesativar": "Disable auto-rotate",

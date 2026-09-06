@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { HiOutlineArrowDownTray, HiOutlineFilm, HiOutlineGlobeAlt } from "react-icons/hi2";
+import { HiOutlineArrowDownTray, HiOutlineGlobeAlt } from "react-icons/hi2";
 import { mesclarClasses } from "../../../../utilitarios/mesclarClasses";
 import type { LicencaPortal, StatusLicencaPortal } from "../../../../tipos";
 
@@ -12,9 +12,11 @@ const CORES_STATUS: Record<StatusLicencaPortal, string> = {
   CANCELED: "border-texto-suave/30 bg-superficie text-texto-secundario",
 };
 
+// A aba "videos" (parallax de câmera) fica oculta da navegação por ora — o
+// resultado ainda está simples demais para ser um item de destaque no menu.
+// A rota em Conta/index.tsx continua registrada, então links diretos não quebram.
 const itensNavegacao = [
   { chave: "downloads", para: "/conta", fim: true, Icone: HiOutlineArrowDownTray },
-  { chave: "videos", para: "/conta/videos", fim: false, Icone: HiOutlineFilm },
   { chave: "panorama360", para: "/conta/360", fim: false, Icone: HiOutlineGlobeAlt },
 ] as const;
 
