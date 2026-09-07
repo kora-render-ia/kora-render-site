@@ -259,6 +259,7 @@
     "nav": {
       "downloads": "Downloads",
       "videos": "Videos",
+      "renderizar": "Render",
       "panorama360": "360°"
     },
     "videos": {
@@ -356,6 +357,135 @@
         "geracaoFalhou": "Generation failed. Please try again.",
         "timeoutPolling": "Generation took longer than expected. Credit may already have been used — check your fal.ai account before trying again.",
         "erroGenerico": "Couldn't generate the video right now. Please try again."
+      }
+    },
+    "renderizar": {
+      "titulo": "Render image",
+      "descricao": "Upload an image of your project (a SketchUp screenshot or a photo) and turn it into a photorealistic render with AI, using your own Google AI Studio key.",
+      "carregandoImagem": "Preparing image...",
+      "trocarImagem": "Change image",
+      "botaoGerar": "Render",
+      "gerando": "Rendering...",
+      "etapas": {
+        "catalogo": "Analyzing the scene...",
+        "render": "Generating the render...",
+        "refinamento": "Applying the edit..."
+      },
+      "upload": {
+        "tituloArraste": "Drag your image here",
+        "ou": "or",
+        "botaoSelecionar": "Select image",
+        "formatosAceitos": "Supported formats: JPG, PNG and WEBP."
+      },
+      "chave": {
+        "titulo": "Set up your Google AI Studio key",
+        "descricao": "Rendering uses Google's Gemini/Nano Banana models. Create a free key on AI Studio and paste it below — it's saved only in this browser.",
+        "linkCriar": "Create a key on Google AI Studio",
+        "rotulo": "API key",
+        "marcador": "Paste your key here",
+        "testando": "Testing...",
+        "botaoTestarSalvar": "Test and save",
+        "botaoRemover": "Change key",
+        "chaveInvalida": "Invalid key. Check it at aistudio.google.com/apikey."
+      },
+      "campos": {
+        "tipo": "Project type",
+        "hora": "Scene mood",
+        "temperatura": "Artificial lighting",
+        "vista": "Window view",
+        "proporcao": "Output aspect ratio",
+        "qualidade": "Quality",
+        "modeloIa": "AI model",
+        "clima": "Atmosphere",
+        "prompt": "Direction (optional)",
+        "promptMarcador": "E.g.: add a person reading on the sofa"
+      },
+      "opcoes": {
+        "tipo": {
+          "interiorResidencial": "Residential interior",
+          "exteriorResidencial": "Residential exterior",
+          "exteriorComercial": "Commercial exterior",
+          "interiorComercial": "Commercial interior",
+          "paisagismo": "Landscaping"
+        },
+        "hora": {
+          "dia": "Day",
+          "luzMarcada": "Strong midday light",
+          "goldenHour": "Golden hour",
+          "blueHour": "Blue hour",
+          "meioDia": "Midday",
+          "fimDoDia": "Late afternoon",
+          "noite": "Night",
+          "semLuzNatural": "No natural light",
+          "luzDifusa": "Diffused light",
+          "overcast": "Overcast",
+          "ceuBrasileiro": "Bright clear sky"
+        },
+        "temperatura": {
+          "desligado": "Off",
+          "5500k": "5500K",
+          "4000k": "4000K",
+          "3000k": "3000K"
+        },
+        "proporcao": {
+          "1x1": "1:1",
+          "4x3": "4:3",
+          "16x9": "16:9",
+          "9x16": "9:16",
+          "4x5": "4:5"
+        },
+        "qualidade": {
+          "2k": "2K",
+          "4k": "4K"
+        },
+        "vista": {
+          "nenhum": "None",
+          "jardim": "Tropical garden",
+          "jardimResidencial": "Residential garden",
+          "mata": "Light woods",
+          "mataDensa": "Dense forest",
+          "montanhas": "Mountains",
+          "mar": "Sea",
+          "cidade": "City"
+        },
+        "modeloIa": {
+          "banana2": "Nano Banana 2 (fast)",
+          "pro": "Nano Banana Pro (more faithful)"
+        },
+        "clima": {
+          "nenhum": "None",
+          "editorial": "Editorial",
+          "clean": "Clean",
+          "aconchegante": "Cozy",
+          "sofisticado": "Sophisticated",
+          "ludico": "Playful"
+        }
+      },
+      "pronto": {
+        "baixar": "Download image",
+        "gerarOutro": "Generate another"
+      },
+      "refinar": {
+        "rotulo": "Adjust this render",
+        "marcador": "E.g.: change the floor to marble",
+        "botao": "Apply adjustment",
+        "aplicando": "Applying adjustment..."
+      },
+      "erros": {
+        "tipoInvalido": "Unsupported format. Upload a JPG, PNG or WEBP image.",
+        "leituraFalhou": "Couldn't read this image. Check the file and try again.",
+        "erroGenerico": "Couldn't render right now. Please try again.",
+        "catalogoVazio": "Gemini Flash returned an empty response while analyzing the scene. Please try again.",
+        "semImagem": "Gemini didn't return an image.",
+        "chaveInvalida": "Invalid or unauthorized Google AI Studio key. Check it at aistudio.google.com/apikey.",
+        "bloqueadoSeguranca": "Google blocked this scene due to a safety filter. Try another scene or prompt.",
+        "requisicaoInvalida": "Invalid request ({{msg}})",
+        "semCredito": "No credit/billing on Google AI Studio. Enable billing at aistudio.google.com.",
+        "semCreditoLimiteGastos": "No credit/billing on Google AI Studio — the call was rejected due to the account's spend limit. Enable billing or raise the limit at aistudio.google.com.",
+        "quotaEsgotada": "Daily quota exhausted on Google AI Studio. Wait for the quota to renew or increase the project's quota.",
+        "limiteTaxa": "You hit Google AI Studio's rate limit (too many calls too fast). Wait a moment and try again.",
+        "instavel": "Google AI Studio is unstable right now. Please try again in a few seconds.",
+        "erroHttp": "Google error (HTTP {{codigo}}): {{msg}}"
       }
     },
     "panorama360": {

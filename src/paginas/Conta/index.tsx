@@ -20,6 +20,10 @@ import type { RespostaPortal } from "../../tipos";
 // Downloads ou Vídeos.
 const AbaPanorama360 = lazy(() => import("./abas/Panorama360"));
 
+// Prompts extensos (vários KB de texto) só baixados por quem realmente abre
+// a aba de renderização.
+const AbaRenderizar = lazy(() => import("./abas/Renderizar"));
+
 function CabecalhoConta() {
   return (
     <Contentor className="flex h-20 items-center justify-between">
@@ -213,6 +217,7 @@ function PainelAutenticado({ sessao, aoSair }: { sessao: RespostaPortal; aoSair:
             <Route index element={<AbaDownloads sessao={sessao} />} />
             <Route path="videos" element={<AbaVideos />} />
             <Route path="360" element={<AbaPanorama360 />} />
+            <Route path="renderizar" element={<AbaRenderizar />} />
             <Route path="*" element={<Navigate to="/conta" replace />} />
           </Routes>
         </Suspense>

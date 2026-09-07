@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { HiOutlineArrowDownTray, HiOutlineGlobeAlt } from "react-icons/hi2";
+import { HiOutlineArrowDownTray, HiOutlineGlobeAlt, HiOutlineSparkles } from "react-icons/hi2";
 import { mesclarClasses } from "../../../../utilitarios/mesclarClasses";
 import type { LicencaPortal, StatusLicencaPortal } from "../../../../tipos";
 
@@ -17,6 +17,7 @@ const CORES_STATUS: Record<StatusLicencaPortal, string> = {
 // A rota em Conta/index.tsx continua registrada, então links diretos não quebram.
 const itensNavegacao = [
   { chave: "downloads", para: "/conta", fim: true, Icone: HiOutlineArrowDownTray },
+  { chave: "renderizar", para: "/conta/renderizar", fim: false, Icone: HiOutlineSparkles },
   { chave: "panorama360", para: "/conta/360", fim: false, Icone: HiOutlineGlobeAlt },
 ] as const;
 

@@ -259,6 +259,7 @@
     "nav": {
       "downloads": "Downloads",
       "videos": "Vídeos",
+      "renderizar": "Renderizar",
       "panorama360": "360°"
     },
     "videos": {
@@ -356,6 +357,135 @@
         "geracaoFalhou": "A geração falhou. Tente novamente.",
         "timeoutPolling": "A geração demorou mais que o esperado. O crédito pode já ter sido consumido — verifique sua conta fal.ai antes de tentar de novo.",
         "erroGenerico": "Não foi possível gerar o vídeo agora. Tente novamente."
+      }
+    },
+    "renderizar": {
+      "titulo": "Renderizar imagem",
+      "descricao": "Envie uma imagem do seu projeto (print do SketchUp ou foto) e transforme em um render fotorrealista com IA, usando sua própria chave do Google AI Studio.",
+      "carregandoImagem": "Preparando imagem...",
+      "trocarImagem": "Trocar imagem",
+      "botaoGerar": "Renderizar",
+      "gerando": "Renderizando...",
+      "etapas": {
+        "catalogo": "Analisando a cena...",
+        "render": "Gerando o render...",
+        "refinamento": "Aplicando o ajuste..."
+      },
+      "upload": {
+        "tituloArraste": "Arraste sua imagem aqui",
+        "ou": "ou",
+        "botaoSelecionar": "Selecionar imagem",
+        "formatosAceitos": "Formatos suportados: JPG, PNG e WEBP."
+      },
+      "chave": {
+        "titulo": "Configure sua chave do Google AI Studio",
+        "descricao": "A renderização usa os modelos Gemini/Nano Banana do Google. Crie uma chave gratuita no AI Studio e cole abaixo — ela fica salva só neste navegador.",
+        "linkCriar": "Criar chave no Google AI Studio",
+        "rotulo": "Chave de API",
+        "marcador": "Cole sua chave aqui",
+        "testando": "Testando...",
+        "botaoTestarSalvar": "Testar e salvar",
+        "botaoRemover": "Trocar chave",
+        "chaveInvalida": "Chave inválida. Verifique em aistudio.google.com/apikey."
+      },
+      "campos": {
+        "tipo": "Tipo de projeto",
+        "hora": "Mood da cena",
+        "temperatura": "Iluminação artificial",
+        "vista": "Vista pela janela",
+        "proporcao": "Proporção de saída",
+        "qualidade": "Qualidade",
+        "modeloIa": "Modelo de IA",
+        "clima": "Atmosfera",
+        "prompt": "Direção (opcional)",
+        "promptMarcador": "Ex: adicione uma pessoa lendo no sofá"
+      },
+      "opcoes": {
+        "tipo": {
+          "interiorResidencial": "Interior residencial",
+          "exteriorResidencial": "Exterior residencial",
+          "exteriorComercial": "Exterior comercial",
+          "interiorComercial": "Interior comercial",
+          "paisagismo": "Paisagismo"
+        },
+        "hora": {
+          "dia": "Dia",
+          "luzMarcada": "Luz marcada",
+          "goldenHour": "Golden hour",
+          "blueHour": "Blue hour",
+          "meioDia": "Meio-dia",
+          "fimDoDia": "Fim do dia",
+          "noite": "Noite",
+          "semLuzNatural": "Sem luz natural",
+          "luzDifusa": "Luz difusa",
+          "overcast": "Overcast",
+          "ceuBrasileiro": "Céu brasileiro"
+        },
+        "temperatura": {
+          "desligado": "Desligada",
+          "5500k": "5500K",
+          "4000k": "4000K",
+          "3000k": "3000K"
+        },
+        "proporcao": {
+          "1x1": "1:1",
+          "4x3": "4:3",
+          "16x9": "16:9",
+          "9x16": "9:16",
+          "4x5": "4:5"
+        },
+        "qualidade": {
+          "2k": "2K",
+          "4k": "4K"
+        },
+        "vista": {
+          "nenhum": "Nenhuma",
+          "jardim": "Jardim tropical",
+          "jardimResidencial": "Jardim residencial",
+          "mata": "Mata (pouco densa)",
+          "mataDensa": "Mata densa",
+          "montanhas": "Montanhas",
+          "mar": "Mar",
+          "cidade": "Cidade"
+        },
+        "modeloIa": {
+          "banana2": "Nano Banana 2 (rápido)",
+          "pro": "Nano Banana Pro (mais fiel)"
+        },
+        "clima": {
+          "nenhum": "Nenhuma",
+          "editorial": "Editorial",
+          "clean": "Clean",
+          "aconchegante": "Aconchegante",
+          "sofisticado": "Sofisticado",
+          "ludico": "Lúdico"
+        }
+      },
+      "pronto": {
+        "baixar": "Baixar imagem",
+        "gerarOutro": "Gerar outro"
+      },
+      "refinar": {
+        "rotulo": "Ajustar este render",
+        "marcador": "Ex: troque o piso por mármore",
+        "botao": "Aplicar ajuste",
+        "aplicando": "Aplicando ajuste..."
+      },
+      "erros": {
+        "tipoInvalido": "Formato não suportado. Envie uma imagem JPG, PNG ou WEBP.",
+        "leituraFalhou": "Não foi possível ler esta imagem. Verifique o arquivo e tente novamente.",
+        "erroGenerico": "Não foi possível renderizar agora. Tente novamente.",
+        "catalogoVazio": "O Gemini Flash respondeu vazio ao analisar a cena. Tente novamente.",
+        "semImagem": "O Gemini não devolveu uma imagem.",
+        "chaveInvalida": "Chave do Google AI Studio inválida ou sem permissão. Verifique em aistudio.google.com/apikey.",
+        "bloqueadoSeguranca": "O Google bloqueou esta cena por filtro de segurança. Tente outra cena ou outro prompt.",
+        "requisicaoInvalida": "Requisição inválida ({{msg}})",
+        "semCredito": "Sem crédito/billing no Google AI Studio. Ative o billing em aistudio.google.com.",
+        "semCreditoLimiteGastos": "Sem crédito/billing no Google AI Studio — a chamada foi recusada por limite de gastos da conta. Ative o billing ou aumente o limite em aistudio.google.com.",
+        "quotaEsgotada": "Quota diária esgotada no Google AI Studio. Aguarde a quota renovar ou aumente a quota do projeto.",
+        "limiteTaxa": "Você bateu no limite de taxa do Google AI Studio (muitas chamadas rápido demais). Aguarde alguns instantes e tente novamente.",
+        "instavel": "Google AI Studio está instável agora. Tente novamente em alguns segundos.",
+        "erroHttp": "Erro Google (HTTP {{codigo}}): {{msg}}"
       }
     },
     "panorama360": {
