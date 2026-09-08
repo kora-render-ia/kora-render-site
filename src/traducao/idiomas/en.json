@@ -463,7 +463,10 @@
       },
       "pronto": {
         "baixar": "Download image",
-        "gerarOutro": "Generate another"
+        "gerarOutro": "Generate another",
+        "ampliar": "Enlarge",
+        "clicandoParaAmpliar": "Click the image to view at full size",
+        "clicandoParaAjustar": "Click the image to fit the screen"
       },
       "refinar": {
         "rotulo": "Adjust this render",

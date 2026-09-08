@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { HiOutlineArrowDownTray, HiOutlineExclamationTriangle } from "react-icons/hi2";
+import { HiOutlineArrowDownTray, HiOutlineExclamationTriangle, HiOutlineMagnifyingGlassPlus } from "react-icons/hi2";
 import Botao from "../../../../../../componentes/comuns/Botao";
 import MoldeCantos from "../../../../../../componentes/ui/MoldeCantos";
+import VisualizadorResultadoRender from "../VisualizadorResultadoRender";
 
 interface PropriedadesPainelResultadoRender {
   dataUrl: string;
@@ -20,6 +21,7 @@ export default function PainelResultadoRender({
 }: PropriedadesPainelResultadoRender) {
   const { t } = useTranslation();
   const [promptRefinamento, setPromptRefinamento] = useState("");
+  const [ampliada, setAmpliada] = useState(false);
 
   function aoEnviarRefinamento() {
     const valor = promptRefinamento.trim();
@@ -47,9 +49,20 @@ export default function PainelResultadoRender({
       )}
 
       <MoldeCantos corCanto="marca">
-        <div className="overflow-hidden rounded-quadro border border-borda bg-fundo-elevado">
+        <button
+          type="button"
+          onClick={() => setAmpliada(true)}
+          aria-label={t("conta.renderizar.pronto.ampliar")}
+          className="group relative block w-full cursor-zoom-in overflow-hidden rounded-quadro border border-borda bg-fundo-elevado"
+        >
           <img src={dataUrl} alt="" className="w-full bg-black" />
-        </div>
+          <span className="absolute inset-0 flex items-center justify-center bg-fundo/0 opacity-0 transition-opacity duration-200 group-hover:bg-fundo/40 group-hover:opacity-100">
+            <span className="flex items-center gap-2 rounded-selo border border-borda bg-fundo-elevado/90 px-3 py-1.5 text-xs text-texto-primario">
+              <HiOutlineMagnifyingGlassPlus size={14} aria-hidden="true" />
+              {t("conta.renderizar.pronto.ampliar")}
+            </span>
+          </span>
+        </button>
       </MoldeCantos>
 
       <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
@@ -63,6 +76,8 @@ export default function PainelResultadoRender({
         </Botao>
         <Botao aoClicar={aoGerarOutro}>{t("conta.renderizar.pronto.gerarOutro")}</Botao>
       </div>
+
+      <VisualizadorResultadoRender dataUrl={ampliada ? dataUrl : null} aoFechar={() => setAmpliada(false)} />
 
       <div className="mt-6 border-t border-borda pt-6">
         <label className="flex flex-col gap-1.5">

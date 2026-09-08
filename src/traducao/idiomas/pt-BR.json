@@ -463,7 +463,10 @@
       },
       "pronto": {
         "baixar": "Baixar imagem",
-        "gerarOutro": "Gerar outro"
+        "gerarOutro": "Gerar outro",
+        "ampliar": "Ampliar",
+        "clicandoParaAmpliar": "Clique na imagem para ver em tamanho real",
+        "clicandoParaAjustar": "Clique na imagem para ajustar à tela"
       },
       "refinar": {
         "rotulo": "Ajustar este render",
