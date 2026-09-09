@@ -1,13 +1,12 @@
 import { useTranslation } from "react-i18next";
-import { FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import Contentor from "../../comuns/Contentor";
 import { NOME_SITE } from "../../../constantes";
 import logoLumi from "../../../ativos/logo/lumi-completa.png";
 
 const redesSociais = [
-  { id: "instagram", Icone: FaInstagram, href: "#" },
-  { id: "youtube", Icone: FaYoutube, href: "#" },
-  { id: "linkedin", Icone: FaLinkedin, href: "#" },
+  { id: "instagram", Icone: FaInstagram, href: "https://www.instagram.com/lumirender.ia" },
+  { id: "tiktok", Icone: FaTiktok, href: "https://www.tiktok.com/@lumirender.ia" },
 ];
 
 const chavesGrupos = ["produto", "empresa", "legal"] as const;
@@ -78,6 +77,8 @@ export default function Rodape() {
               <a
                 key={rede.id}
                 href={rede.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={rede.id}
                 className="text-texto-suave transition-colors hover:text-marca"
               >

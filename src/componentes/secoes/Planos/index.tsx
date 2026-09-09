@@ -49,6 +49,10 @@ export default function Planos() {
                   {t("planos.custoApiSelo")}
                 </span>
 
+                <p className="max-w-md text-sm font-medium leading-relaxed text-marca">
+                  {t("planos.avisoIA")}
+                </p>
+
                 <Botao
                   href={checkoutPlanos[0]}
                   target="_blank"

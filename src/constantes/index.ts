@@ -1,5 +1,5 @@
 export const NOME_SITE = "Lumi";
-export const EMAIL_CONTATO = "suporte@lumi.app";
+export const EMAIL_CONTATO = "lumirender.ia@gmail.com";
 
 // TODO: substitua pelo domínio final de produção (mantenha sincronizado com
 // index.html, public/robots.txt e public/sitemap.xml). Pode ser sobrescrito
