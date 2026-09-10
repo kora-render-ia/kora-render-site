@@ -10,7 +10,7 @@ export const URL_SITE = (import.meta.env.VITE_SITE_URL || "https://SEU-DOMINIO.c
 );
 
 // Mantenha sincronizado com o <title> e a <meta name="description"> em index.html.
-export const TITULO_PADRAO = "Lumi — Renderização com IA para SketchUp";
+export const TITULO_PADRAO = "Seu SketchUp agora também cria imagens fotorrealistas com IA";
 export const DESCRICAO_PADRAO =
   "Transforme seus modelos do SketchUp em imagens fotorrealistas em segundos com o Lumi, o plugin de renderização por inteligência artificial para arquitetos e designers.";
 
