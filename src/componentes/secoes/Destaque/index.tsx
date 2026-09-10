@@ -92,9 +92,6 @@ export default function Destaque() {
           <Botao href="#planos" tamanho="lg">
             {t("destaque.ctaPrimario")}
           </Botao>
-          <Botao href="#antes-depois" variante="secundario" tamanho="lg">
-            {t("destaque.ctaSecundario")}
-          </Botao>
         </motion.div>
       </Contentor>
 
