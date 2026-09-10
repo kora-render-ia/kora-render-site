@@ -27,9 +27,12 @@ export default function Destaque() {
           transition={{ duration: 0.65, delay: 0.08 }}
           className="equilibrio-texto mx-auto max-w-5xl break-words font-titulo text-[2.6rem] font-bold leading-[1.05] tracking-tight text-texto-primario sm:text-7xl lg:text-[5.75rem]"
         >
-          <span>{t("destaque.tituloAntes")}</span>
-          <span className="text-marca">{t("destaque.tituloDestaque")}</span>
-          <span>{t("destaque.tituloDepois")}</span>
+          <span>{t("destaque.tituloParte1")}</span>
+          <span className="text-marca">{t("destaque.tituloSketchUp")}</span>
+          <span>{t("destaque.tituloParte2")}</span>
+          <span className="text-marca">{t("destaque.tituloCria")}</span>
+          <span>{t("destaque.tituloParte3")}</span>
+          <span className="text-marca">{t("destaque.tituloIA")}</span>
         </motion.h1>
 
         <motion.p
